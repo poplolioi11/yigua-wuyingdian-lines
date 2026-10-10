@@ -4,6 +4,16 @@
 
 資料署名保留為 **yigua.art網站轉譯**；實際工作是古籍影像的轉錄、整理與既有校對，不是新翻譯。古籍原文可自由使用、商用及改作；請求重用者保留底本、來源連結及這項署名，但不以此限制公有領域原文的使用。本站具有原創性的說明文字另採 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。完整範圍見 [LICENSE.md](LICENSE.md)。
 
+整理者與維護者：**一卦 yigua.art / [poplolioi11](https://github.com/poplolioi11)**。此署名指本資料集的轉錄、整理與維護，不是古籍作者，也不代表館藏機構。
+
+## 🌌 創作者宣言 / Creator's Statement
+
+本專案的誕生，得益於無數前人留下的文化資產，以及現代 AI 技術的協助。在數位與 AI 交織的時代，沒有任何創意是孤立存在的。
+
+我不尋求將此專案商業變現。我的核心願景是：**「讓我的創意與勞動，成為他人創意的墊腳石。」** 正如我站在前人的肩膀上一樣，我衷心希望這份結構化的開源資料，能成為你創新、研究或二次創作的起點。
+
+如果您在您的研究、App、或任何專案中引用了本庫受 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授權的原創說明，請依該條款標示來源。古籍原文屬公有領域，可自由使用；對於這部分，我也誠摯邀請您保留「yigua.art網站轉譯 / poplolioi11」署名，或自願透過 [Issues](https://github.com/poplolioi11/yigua-wuyingdian-lines/issues) 分享您的成果，但這不是使用條件。這能讓我看到這份瘋狂的熱情在世界上留下了什麼樣的痕跡。謝謝你，與我共同編織這個時代的文化記憶。
+
 ## 下載與使用
 
 - [wuying-lines.json](wuying-lines.json)：包含卦號、卦名、六條爻辭、逐爻影像網址及來源資訊。
@@ -20,6 +30,17 @@ node verify.mjs
 ```
 
 這項檢查只驗證資料結構、JSON/TXT 一致性、來源網址形式及既有檔案校驗值；**不替代對原刻影像的逐字校對，也不保證外部網址永遠可用**。
+
+## 引用與共同維護
+
+根目錄的 [CITATION.cff](CITATION.cff) 提供機器可讀的資料集引用資訊，使用公開帳號 `poplolioi11` 署名，不公開真實姓名或私人信箱。GitHub 的「Cite this repository」入口可取得 APA 與 BibTeX 格式；引用特定資料時，請另記錄所用提交識別碼或檔案 SHA-256，便於追溯。
+
+建議引用：**poplolioi11（一卦 yigua.art）。《御纂周易折中》武英殿刊本·六十四卦爻辭［資料集］。2026。https://github.com/poplolioi11/yigua-wuyingdian-lines**
+
+- [Issues：提出校對疑義、使用問題或自願分享引用成果](https://github.com/poplolioi11/yigua-wuyingdian-lines/issues)。回報格式見 [CONTRIBUTING.md](CONTRIBUTING.md)，不必提供個人資料。
+- [Pull requests：提交有來源證據的修正](https://github.com/poplolioi11/yigua-wuyingdian-lines/pulls)。修正由維護者審閱，不會自動改動正文。
+
+`CITATION.cff` 是引用資訊，不是引用追蹤服務，不會通知維護者每次下載或外部引用。Issues 中自願告知的用途、公開 fork 與引用連結只能反映可觀察到的部分，不能當成完整使用人數；本庫不加入使用者追蹤程式。古籍原文的自由使用不以告知維護者或引用本庫為條件。
 
 ## 底本與可追溯性
 
@@ -51,4 +72,6 @@ This structured I Ching (Yijing / Zhouyi) dataset contains the 384 line statemen
 
 Most line-image references point to the Harvard-Yenching Library copy; hexagram 20 uses the Meiji University Library copy of the same edition, not a proven identical print run. The records are existing yigua exports, not a new complete second collation. Separate page citations for the two special statements remain to be added. See [PROVENANCE.md](PROVENANCE.md) for the damaged-print note and other limitations.
 
-The ancient public-domain text may be used, adapted, and used commercially without a new restriction from this transcription. Attribution to **yigua.art網站轉譯** (image transcription and preparation, not a new translation) is requested, not imposed on the public-domain text. Copyright-protected original documentation is licensed under CC BY 4.0. `node verify.mjs` checks file integrity and structure, not philological correctness.
+The ancient public-domain text may be used, adapted, and used commercially without a new restriction from this transcription. Attribution to **yigua.art網站轉譯** (image transcription and preparation, not a new translation) is requested, not imposed on the public-domain text. The dataset is prepared and maintained by **poplolioi11 (一卦 yigua.art)**. Copyright-protected original documentation is licensed under CC BY 4.0. `node verify.mjs` checks file integrity and structure, not philological correctness.
+
+[CITATION.cff](CITATION.cff) provides dataset citation metadata, not automatic usage or citation tracking. Corrections and optional reports of reuse are welcome through [Issues](https://github.com/poplolioi11/yigua-wuyingdian-lines/issues); evidence-based changes may be submitted through pull requests. Reuse of the public-domain text does not require reporting it to the maintainer.

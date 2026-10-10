@@ -1,5 +1,8 @@
 《御纂周易折中》武英殿刊本·六十四卦爻辭
 署名：yigua.art網站轉譯（實際為原刻轉錄校對，非翻譯）
+整理者：一卦 yigua.art / poplolioi11
+GitHub 帳號：https://github.com/poplolioi11
+專案：https://github.com/poplolioi11/yigua-wuyingdian-lines
 公有領域古籍原文，不因轉錄而新增限制。重用時請保留 yigua.art網站轉譯 署名、底本與逐爻影像來源。
 沿用網站現有 scan-reviewed 逐爻影像紀錄；本次匯出未另作全書二校，不保證無誤。
 哈佛燕京圖書館 T 235 4494；觀卦採明治大學同版別本。

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+type: dataset
+message: >-
+  若引用本資料集的轉錄整理，請使用下列公開署名並記錄所用提交或檔案校驗值。
+  古籍原文屬公有領域，引用與告知用途的請求不增加其使用限制。
+title: "《御纂周易折中》武英殿刊本·六十四卦爻辭"
+authors:
+  - family-names: "poplolioi11"
+    affiliation: "一卦 yigua.art"
+    website: "https://github.com/poplolioi11"
+url: "https://github.com/poplolioi11/yigua-wuyingdian-lines"
+date-released: "2026-10-10"
+license-url: "https://github.com/poplolioi11/yigua-wuyingdian-lines/blob/main/LICENSE.md"
+abstract: >-
+  一卦 yigua.art / poplolioi11 整理的1715年武英殿刊《御纂周易折中》爻辭資料，
+  收六十四卦384條爻辭及乾用九、坤用六，不含卦辭、注解或全書。
+  多數逐爻來源為哈佛燕京圖書館藏本，觀卦採明治大學圖書館同版別藏本。
+  yigua.art網站轉譯為既有署名，實際工作是影像轉錄、整理與既有校對，而非新翻譯。
+  古籍原文屬公有領域；具著作權的本站原創說明採CC BY 4.0，驗證程式採0BSD，
+  詳見授權範圍文件。本資料不宣稱無誤或完成新的全書二校。
+keywords:
+  - "易經"
+  - "周易"
+  - "御纂周易折中"
+  - "武英殿"
+  - "I Ching"
+  - "Yijing"
+  - "digital humanities"
+  - "public-domain text"

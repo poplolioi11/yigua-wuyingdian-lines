@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: 0BSD
+// Maintainer: poplolioi11 (一卦 yigua.art), https://github.com/poplolioi11
 // Structure and integrity checks only; not a replacement for scan collation.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 
 const expectedHashes = new Map([
-  ['wuying-lines.json', '472030bfdcf90ba10ff723703b9344b726f710c0e36cb93a285ec28ffeca2568'],
-  ['wuying-lines.txt', 'cc4a1962d24271ef966079ebf27c57a62cac2afd3367044a0cf9ba056d3fa8e1'],
+  ['wuying-lines.json', '184d9b6fdeb2fbce08384b917e42d2ce75b74c46210a69496870476d6f53a732'],
+  ['wuying-lines.txt', '1a52a95326505e1bd932ab04465f7c31b9f357e2ea290726c913c9a1e10827db'],
 ]);
 const directory = new URL('./', import.meta.url);
 const contents = new Map();
@@ -29,6 +30,10 @@ for (const row of checksumLines) {
 
 const dataset = JSON.parse(contents.get('wuying-lines.json'));
 assert.equal(dataset.meta.attribution, 'yigua.art網站轉譯', 'project attribution mismatch');
+assert.equal(dataset.meta.githubAccount, 'poplolioi11', 'public GitHub attribution mismatch');
+assert.equal(dataset.meta.preparedBy, '一卦 yigua.art / poplolioi11', 'preparer attribution mismatch');
+assert.equal(dataset.meta.creatorUrl, 'https://github.com/poplolioi11', 'creator profile mismatch');
+assert.equal(dataset.meta.projectUrl, 'https://github.com/poplolioi11/yigua-wuyingdian-lines', 'project link mismatch');
 assert.equal(dataset.meta.exportedAt, '2026-10-07', 'existing export date changed');
 assert.ok(dataset.meta.scope.includes('384'), 'scope must record the 384 ordinary line statements');
 assert.ok(dataset.meta.scope.includes('不含卦辭'), 'scope must exclude hexagram judgments');
@@ -36,6 +41,19 @@ assert.equal(dataset.hexagrams.length, 64, 'expected 64 hexagrams');
 
 const positionLabels = [/^初[九六]：\S/u, /^[九六]二：\S/u, /^[九六]三：\S/u, /^[九六]四：\S/u, /^[九六]五：\S/u, /^上[九六]：\S/u];
 const txt = contents.get('wuying-lines.txt');
+assert.ok(txt.includes(`整理者：${dataset.meta.preparedBy}\n`), 'TXT preparer attribution mismatch');
+assert.ok(txt.includes(`GitHub 帳號：${dataset.meta.creatorUrl}\n`), 'TXT creator profile mismatch');
+assert.ok(txt.includes(`專案：${dataset.meta.projectUrl}\n`), 'TXT project link mismatch');
+
+// Required-field consistency only, not a complete CFF schema validator.
+const citation = await readFile(new URL('CITATION.cff', directory), 'utf8');
+assert.match(citation, /^cff-version: 1\.2\.0$/mu, 'CFF version mismatch');
+assert.match(citation, /^type: dataset$/mu, 'citation must identify a dataset');
+assert.match(citation, /^title: "《御纂周易折中》武英殿刊本·六十四卦爻辭"$/mu, 'citation title mismatch');
+assert.match(citation, /^  - family-names: "poplolioi11"$/mu, 'citation author attribution mismatch');
+assert.match(citation, /^    website: "https:\/\/github\.com\/poplolioi11"$/mu, 'citation creator profile mismatch');
+assert.match(citation, /^url: "https:\/\/github\.com\/poplolioi11\/yigua-wuyingdian-lines"$/mu, 'citation project link mismatch');
+assert.match(citation, /^license-url: "https:\/\/github\.com\/poplolioi11\/yigua-wuyingdian-lines\/blob\/main\/LICENSE\.md"$/mu, 'citation license scope link mismatch');
 let lineCount = 0;
 let sourceCount = 0;
 let specialCount = 0;
@@ -92,5 +110,7 @@ console.log(JSON.stringify({
   ordinaryLineImageReferences: sourceCount,
   specialStatements: specialCount,
   fixedSha256Checks: expectedHashes.size,
+  publicAttribution: dataset.meta.githubAccount,
+  citationRequiredFields: 'passed (not full schema validation)',
   limitations: ['Special statements do not yet have independent page-source fields.', 'These checks do not verify scan transcription accuracy or external URL availability.'],
 }, null, 2));
