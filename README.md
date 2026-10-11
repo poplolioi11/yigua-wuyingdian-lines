@@ -23,6 +23,25 @@
 
 JSON 的 `hexagrams` 按文王卦序排列；每卦的 `lines` 與 `lineSources` 均由初爻到上爻一一對應。`special` 只出現在乾、坤，分別收用九、用六。爻位後的全形冒號是資料欄位分隔，不是為原典新增句讀。原刻的「无」「羣」「牀」等用字保留，不做全域簡繁轉換。
 
+### 格式、欄位與覆蓋範圍
+
+兩份檔案均為 UTF-8 文字。JSON 以 `meta` 保存整理資訊，以 `hexagrams` 保存六十四卦記錄；TXT 是同一份資料的閱讀用匯出，不是另一底本。主要欄位如下；這是欄位說明，**不是完整 JSON Schema 或 TEI schema**。
+
+| 欄位 | 語意與使用限制 |
+| --- | --- |
+| `meta.scope` | 公開範圍：384 條普通爻辭及用九、用六，不含卦辭、注解、傳文或全書。 |
+| `meta.attribution`、`preparedBy`、`githubAccount` | 本資料整理署名及維護帳號；不是古籍作者或館藏權利人的姓名。 |
+| `meta.exportedAt` | 既有資料匯出日期，不能當作全部影像重新校對日期。 |
+| `hexagrams[].number`、`name` | 文王卦序 1–64 及卦名；陣列索引與卦號不要混淆。 |
+| `hexagrams[].lines` | 六個字串，由初爻至上爻排列；每條含原文爻位標題及全形冒號。 |
+| `hexagrams[].lineSources` | 六個原頁網址，與 `lines` 同索引對應；不涵蓋兩則 `special` 的獨立原頁證據。 |
+| `hexagrams[].sourceUrl` | 藏本或影像入口，不等同每條文字的獨立頁碼。 |
+| `hexagrams[].status` | 既有 `scan-reviewed` 紀錄標籤，不是無誤保證或第三方認證。 |
+| `hexagrams[].special` | 僅乾、坤使用的 `{ label, text }`，分別保存用九、用六。 |
+| `hexagrams[].sourceNote` | 有記錄時保存來源限制，例如損卦上九印墨缺損及旁證；不是古籍正文。 |
+
+目前公開庫**沒有 TEI XML、TEI ODD 或正式 JSON Schema**，也沒有存放原刻影像、完整校勘 apparatus 或逐字與影像座標的對齊資料。JSON/TXT 可以用於後續轉換，但不能因此宣稱已符合 TEI 規範或已完成全書數位校勘。
+
 可用 Node.js 18 或更新版本執行不需要安裝套件的資料檢查：
 
 ```sh
@@ -31,11 +50,41 @@ node verify.mjs
 
 這項檢查只驗證資料結構、JSON/TXT 一致性、來源網址形式及既有檔案校驗值；**不替代對原刻影像的逐字校對，也不保證外部網址永遠可用**。
 
+### 可重現的版本與完整性
+
+本庫以 **Git 提交識別碼及資料檔 SHA-256** 識別所用版本，不以網站版本號代替資料版本。`CITATION.cff` 的發布日期為 2026-10-10；古籍資料原匯出日期為 2026-10-07。這些日期的用途不同，不能作為新的全校完成日期。本庫目前沒有已取得的 DOI。
+
+目前兩份資料檔的固定校驗值為：
+
+```text
+184d9b6fdeb2fbce08384b917e42d2ce75b74c46210a69496870476d6f53a732  wuying-lines.json
+1a52a95326505e1bd932ab04465f7c31b9f357e2ea290726c913c9a1e10827db  wuying-lines.txt
+```
+
+研究或二次整理時，請保留所用檔案、提交識別碼及其 `SHA256SUMS`。已下載儲存庫的使用者，可在庫內執行：
+
+```sh
+git rev-parse HEAD
+node verify.mjs
+```
+
+引用連結宜用 `https://github.com/poplolioi11/yigua-wuyingdian-lines/blob/<完整提交識別碼>/wuying-lines.json` 這類固定提交網址，將 `<完整提交識別碼>` 換成你實際使用的值；`main` 會隨修正而改變。只下載單一檔案時，至少記錄檔名、SHA-256、下載網址及取用日期。校驗成功只表示取得預期位元內容，不能證明每字讀法正確。
+
 ## 引用與共同維護
 
 根目錄的 [CITATION.cff](CITATION.cff) 提供機器可讀的資料集引用資訊，使用公開帳號 `poplolioi11` 署名，不公開真實姓名或私人信箱。GitHub 的「Cite this repository」入口可取得 APA 與 BibTeX 格式；引用特定資料時，請另記錄所用提交識別碼或檔案 SHA-256，便於追溯。
 
 建議引用：**poplolioi11（一卦 yigua.art）。《御纂周易折中》武英殿刊本·六十四卦爻辭［資料集］。2026。https://github.com/poplolioi11/yigua-wuyingdian-lines**
+
+### 分開引用資料集、古籍與館藏
+
+三種引用各自回答不同問題，不能以整理者帳號取代古籍作者，也不能把館藏機構列作本資料集作者。請依投稿或學科規範調整格式，並保留以下可追溯資訊：
+
+1. **資料集／轉錄整理**：引用上列 `poplolioi11（一卦 yigua.art）` 的資料集資訊，補上實際所用完整提交識別碼、檔案校驗值及取用日期。這說明你使用哪份數位整理，不表示整理者撰寫古籍。
+2. **古籍／版別**：可記為「《御纂周易折中》。康熙五十四年（1715）北京武英殿刊本」，引文另列卦名、爻位及可核實的卷葉。編纂或校刊責任者請依實際引用的館藏書目及原書題署核實；本庫尚未獨立整理責任者權威記錄，不在此另憑記憶補寫作者。不要將本庫爻辭節錄引用成《御纂周易折中》全書。
+3. **館藏／原刻影像**：依實際條目引用哈佛燕京圖書館藏本（T2354494）或明治大學圖書館藏本（LI00000554），列原頁網址、影像識別碼或卷葉及取用日期；入口見下方「底本與可追溯性」。觀卦須註明使用明治藏本，不能統稱全庫都取自哈佛。用九、用六尚欠獨立頁碼，不應代填未核實頁碼。
+
+若逐字引用或提出異文，建議同時提供「數位資料版本」與「古籍原頁」，讓讀者能區分轉錄結果與底本證據。發布後若自行改字、加標點、轉換字形或合併其他文本，請另述處理方法，勿把改後文字仍標成未改動的本站匯出。
 
 - [Issues：提出校對疑義、使用問題或自願分享引用成果](https://github.com/poplolioi11/yigua-wuyingdian-lines/issues)。回報格式見 [CONTRIBUTING.md](CONTRIBUTING.md)，不必提供個人資料。
 - [Pull requests：提交有來源證據的修正](https://github.com/poplolioi11/yigua-wuyingdian-lines/pulls)。修正由維護者審閱，不會自動改動正文。
@@ -55,6 +104,7 @@ node verify.mjs
 
 沿用一卦既有的 `scan-reviewed` 逐爻影像紀錄，原紀錄完成日期為 2026-10-01；兩份資料匯出於 2026-10-07。本次建立公開資料庫**沒有重新進行全部 384 爻的第二輪影像校對**，狀態名稱不是第三方認證，也不保證完全無誤。
 
+- 本專案的創作者宣言記錄 AI 技術的協助；本庫沒有逐條保存所有原始 OCR／模型輸出、模型版本與每次人工覆核紀錄，不能由 `scan-reviewed` 還原完整工作歷程，也不能宣稱每筆均經獨立人工雙校。學術使用者仍須依逐爻原頁核對關鍵引文；AI 記憶或其他網路通行文字不能取代原刻證據。
 - 損卦上九的大字中段印墨缺損。既有紀錄以同頁程傳逐句引文及次頁集說引文核對缺損文字；JSON 保留 `sourceNote`，不能宣稱大字原頁完全清楚。
 - 用九、用六已有文本，但此 JSON 尚未附兩則文字各自的獨立頁碼來源；只有乾、坤及全書影像入口。這是待補足的證據缺口，不能宣稱逐條來源欄位已涵蓋它們。
 - 可編碼的異體字不等於摹刻。檔案不重現原刻全部排印字形、墨跡或圈點，也不自行改為現代通行字、補標點或刪字。
@@ -75,3 +125,5 @@ Most line-image references point to the Harvard-Yenching Library copy; hexagram 
 The ancient public-domain text may be used, adapted, and used commercially without a new restriction from this transcription. Attribution to **yigua.art網站轉譯** (image transcription and preparation, not a new translation) is requested, not imposed on the public-domain text. The dataset is prepared and maintained by **poplolioi11 (一卦 yigua.art)**. Copyright-protected original documentation is licensed under CC BY 4.0. `node verify.mjs` checks file integrity and structure, not philological correctness.
 
 [CITATION.cff](CITATION.cff) provides dataset citation metadata, not automatic usage or citation tracking. Corrections and optional reports of reuse are welcome through [Issues](https://github.com/poplolioi11/yigua-wuyingdian-lines/issues); evidence-based changes may be submitted through pull requests. Reuse of the public-domain text does not require reporting it to the maintainer.
+
+For scholarly use, cite the digital dataset (maintainer, exact Git commit and file checksum), the historical edition, and the holding institution or page image separately. This repository currently provides UTF-8 JSON/TXT and an integrity checker, not TEI XML, an ODD, a formal JSON Schema, or a DOI. AI assistance and the existing review label do not establish complete independent double collation; verify consequential readings against the referenced scans and report uncertainty with page-level evidence.
