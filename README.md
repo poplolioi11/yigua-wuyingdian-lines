@@ -18,6 +18,7 @@
 
 - [wuying-lines.json](wuying-lines.json)：包含卦號、卦名、六條爻辭、逐爻影像網址及來源資訊。
 - [wuying-lines.txt](wuying-lines.txt)：方便直接閱讀的文字版。
+- [TEI P5 XML](tei/wuying-lines.tei.xml)：保留原文字串、逐爻來源及來源 JSON 快照；[編碼與驗證說明](tei/README-TEI.md)。
 - [PROVENANCE.md](PROVENANCE.md)：底本、既有校對紀錄與未解決的來源缺口。
 - [SHA256SUMS](SHA256SUMS)：兩份資料檔的 SHA-256 校驗值。
 
@@ -40,7 +41,7 @@ JSON 的 `hexagrams` 按文王卦序排列；每卦的 `lines` 與 `lineSources`
 | `hexagrams[].special` | 僅乾、坤使用的 `{ label, text }`，分別保存用九、用六。 |
 | `hexagrams[].sourceNote` | 有記錄時保存來源限制，例如損卦上九印墨缺損及旁證；不是古籍正文。 |
 
-目前公開庫**沒有 TEI XML、TEI ODD 或正式 JSON Schema**，也沒有存放原刻影像、完整校勘 apparatus 或逐字與影像座標的對齊資料。JSON/TXT 可以用於後續轉換，但不能因此宣稱已符合 TEI 規範或已完成全書數位校勘。
+發行包 **0.1.0** 新增 TEI P5 4.12.0 XML，以官方 Relax NG schema 與專案一致性檢查驗證；原 JSON／TXT 位元內容未改。TEI 可無損回讀原文字串、逐爻來源及完整來源 JSON。沒有製作專屬 ODD、正式 JSON Schema、完整校勘 apparatus 或逐字影像座標；不打包館藏影像。格式通過不能證明古籍文字正確，也不代表全書數位校勘完成。詳見 [TEI 說明](tei/README-TEI.md)。
 
 可用 Node.js 18 或更新版本執行不需要安裝套件的資料檢查：
 
@@ -52,7 +53,7 @@ node verify.mjs
 
 ### 可重現的版本與完整性
 
-本庫以 **Git 提交識別碼及資料檔 SHA-256** 識別所用版本，不以網站版本號代替資料版本。`CITATION.cff` 的發布日期為 2026-10-10；古籍資料原匯出日期為 2026-10-07。這些日期的用途不同，不能作為新的全校完成日期。本庫目前沒有已取得的 DOI。
+本庫以 **資料版本、Git 提交識別碼及檔案 SHA-256** 識別所用內容，不以網站版本號代替資料版本。公開庫首次建立於 2026-10-10；加入 TEI 的 0.1.0 發行包準備於 2026-10-11；古籍資料原匯出日期為 2026-10-07。這些日期不能作為新的全校完成日期。Zenodo 識別碼為 [10.5281/zenodo.23298982](https://doi.org/10.5281/zenodo.23298982)，公開與登記狀態以 Zenodo 記錄為準；製備時 XML 註記的 reserved 是當次查核狀態，不是逐字校對認證。
 
 目前兩份資料檔的固定校驗值為：
 
@@ -96,7 +97,7 @@ node verify.mjs
 - 第 1–19、21–64 卦：哈佛燕京圖書館藏武英殿刊本，館藏號 T2354494。[館藏書目](https://id.lib.harvard.edu/alma/990079179900203941/catalog)、[原刻影像](https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW)。
 - 第 20 觀卦：明治大學圖書館同版別藏本，書目載北京武英殿、康熈 54 年（1715）。[館藏書目及影像](https://m-archives.meiji.jp/content/detail/LI00000554)。**同版別不等於已證明同一次印刷；更換藏本的原因未見於既有紀錄。**
 
-每條爻辭的原頁網址都保存在 JSON 中。此資料庫不下載、打包或重新散布館藏掃描影像，也不使用館方標誌或暗示館方背書。
+384 條普通爻辭的原頁網址保存在 JSON 中；用九、用六尚欠獨立頁碼證據，未代填。此資料庫不下載、打包或重新散布館藏掃描影像，也不使用館方標誌或暗示館方背書。
 
 哈佛的[公有領域數位重製開放政策](https://library.harvard.edu/about/policies/policy-access-digital-reproductions-works-public-domain)允許符合政策的開放公有領域影像無需另付費或申請許可即再利用，並請求妥善引用館藏。明治的[利用指南](https://m-archives.meiji.jp/guide)說明 PDM 資料可免費用於商用及非商用用途，要求註明館藏出處及改動，並請求寄贈利用成果。本庫記錄轉錄行為與來源，尚未寄贈成果；不代表所有館藏資料都採相同條件。
 
@@ -126,4 +127,4 @@ The ancient public-domain text may be used, adapted, and used commercially witho
 
 [CITATION.cff](CITATION.cff) provides dataset citation metadata, not automatic usage or citation tracking. Corrections and optional reports of reuse are welcome through [Issues](https://github.com/poplolioi11/yigua-wuyingdian-lines/issues); evidence-based changes may be submitted through pull requests. Reuse of the public-domain text does not require reporting it to the maintainer.
 
-For scholarly use, cite the digital dataset (maintainer, exact Git commit and file checksum), the historical edition, and the holding institution or page image separately. This repository currently provides UTF-8 JSON/TXT and an integrity checker, not TEI XML, an ODD, a formal JSON Schema, or a DOI. AI assistance and the existing review label do not establish complete independent double collation; verify consequential readings against the referenced scans and report uncertainty with page-level evidence.
+For scholarly use, cite the versioned digital dataset, the historical edition, and the holding institution or page image separately. Package 0.1.0 adds TEI P5 XML, validated against the official 4.12.0 Relax NG schema and lossless source comparisons, without changing the original UTF-8 JSON/TXT. DOI: https://doi.org/10.5281/zenodo.23298982 (publication and registration status are authoritative on Zenodo). No custom ODD, complete critical apparatus, formal JSON Schema or independent double collation is claimed. XML validity and a DOI are not scholarly quality certifications; verify consequential readings against the scans and report uncertainty with page-level evidence.

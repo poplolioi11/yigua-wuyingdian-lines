@@ -1,0 +1,2312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="zh-Hant" xml:id="wuying-lines-tei">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>《御纂周易折中》武英殿刊本·六十四卦爻辭：TEI 編碼 0.1.0</title>
+        <respStmt>
+          <resp>既有爻辭資料的轉錄、整理與維護署名；不是古籍作者署名</resp>
+          <name ref="https://github.com/poplolioi11">一卦 yigua.art / poplolioi11</name>
+        </respStmt>
+        <respStmt>
+          <resp>既有資料保留的專案署名；實際工作為原刻影像轉錄與整理，非新翻譯</resp>
+          <name>yigua.art網站轉譯</name>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition n="0.1.0">TEI 格式編碼版本 0.1.0；來源資料版本另以 Git 提交識別碼與 SHA-256 識別。</edition>
+      </editionStmt>
+      <extent>
+        <measure unit="hexagram" quantity="64">64 卦</measure>
+        <measure unit="ordinary-line-statement" quantity="384">384 條普通爻辭</measure>
+        <measure unit="special-statement" quantity="2">用九、用六共 2 則</measure>
+      </extent>
+      <publicationStmt>
+        <publisher>一卦 yigua.art / poplolioi11</publisher>
+        <date when="2026-10-11">2026-10-11</date>
+        <idno type="URI">https://github.com/poplolioi11/yigua-wuyingdian-lines</idno>
+        <idno type="source-git-commit">3c8e0309e30b2263d94c164e135c7e69cc415b7f</idno>
+        <idno type="source-json-sha256">184d9b6fdeb2fbce08384b917e42d2ce75b74c46210a69496870476d6f53a732</idno>
+        <idno type="source-txt-sha256">1a52a95326505e1bd932ab04465f7c31b9f357e2ea290726c913c9a1e10827db</idno>
+        <idno type="DOI">10.5281/zenodo.23298982</idno>
+        <availability status="free">
+          <p>古籍原文屬公有領域，不因轉錄、整理、TEI 編碼或 AI 輔助而新增限制。請求保留 yigua.art網站轉譯、底本與逐爻影像來源；此請求不是古籍原文的使用條件。</p>
+          <p>達到著作權保護門檻的原創說明採 <ref target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</ref>；完整權利範圍見來源庫 <ref target="https://github.com/poplolioi11/yigua-wuyingdian-lines/blob/3c8e0309e30b2263d94c164e135c7e69cc415b7f/LICENSE.md">LICENSE.md</ref>。館藏影像沒有打包於本資料集，第三方影像政策與其他獨立權利仍須另查。</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="scope">64卦384爻及用九用六；不含卦辭、注解或全書。</note>
+        <note type="existing-review">沿用網站現有 scan-reviewed 逐爻影像紀錄；本次匯出未另作全書二校，不保證無誤。</note>
+        <note type="source-export-date">2026-10-07</note>
+        <note type="source-metadata-date">2026-10-10</note>
+        <note type="doi-status">截至 2026-10-11 TEI 編碼準備查核，Zenodo 草稿已預留 10.5281/zenodo.23298982；當次查核尚未發布。預留識別碼不等於正式發布；後續發布狀態應以 Zenodo 記錄為準。</note>
+      </notesStmt>
+      <sourceDesc>
+        <listBibl>
+          <bibl xml:id="source-dataset">
+            <title>《御纂周易折中》武英殿刊本·六十四卦爻辭</title>
+            <ref target="https://github.com/poplolioi11/yigua-wuyingdian-lines/blob/3c8e0309e30b2263d94c164e135c7e69cc415b7f/wuying-lines.json">本次格式轉換所用固定提交 JSON</ref>
+            <note>哈佛燕京圖書館 T 235 4494；觀卦採明治大學同版別本。</note>
+          </bibl>
+          <bibl xml:id="source-harvard">
+            <title>《御纂周易折中》康熙五十四年（1715）武英殿刊本，哈佛燕京圖書館藏本</title>
+            <date when="1715">1715</date>
+            <idno type="holding">T2354494</idno>
+            <ref target="https://id.lib.harvard.edu/alma/990079179900203941/catalog">館藏書目</ref>
+            <ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">原刻影像入口</ref>
+            <note>第 1–19、21–64 卦的普通爻辭來源；古籍責任者權威記錄尚未由本資料集獨立整理，不另補作者。</note>
+          </bibl>
+          <bibl xml:id="source-meiji">
+            <title>《御纂周易折中》康熙五十四年（1715）武英殿刊本，明治大學圖書館藏本</title>
+            <date when="1715">1715</date>
+            <idno type="holding">LI00000554</idno>
+            <ref target="https://m-archives.meiji.jp/content/detail/LI00000554">館藏書目及影像</ref>
+            <note>僅第 20 觀卦；同版別不等於已證明同一次印刷，更換藏本原因未見於既有紀錄。</note>
+          </bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>將固定版本 JSON 轉為 TEI P5 閱讀結構，並保留完整來源 JSON metadata。這是格式轉換，沒有重新核對全部原刻影像，不新增獨立校勘或人工雙校主張。</p>
+      </projectDesc>
+      <editorialDecl>
+        <normalization>
+          <p>64 個 hexagram div 保留原卦序；每個 ordinary ab 的完整文字與來源 JSON lines 字串相同，包含原本全形冒號。冒號為爻位與正文的欄位分隔，不是新增古籍句讀。不作 Unicode 正規化、簡繁轉換、異體字替換、補標點或補文。special ab 以來源 label、全形冒號與 text 組合，與既有 TXT 閱讀字串相同。</p>
+        </normalization>
+        <interpretation>
+          <p>ordinary ab 的 facs 原樣保存對應 lineSources 網址，沒有新增影像座標、surface 或 zone。用九、用六未附獨立原頁來源，special ab 不設 facs。sourceNote 與來源狀態存於 note，屬資料說明而非古籍正文；scan-reviewed 僅沿用既有紀錄，不是無誤保證、第三方認證或新的影像校對。</p>
+          <p>xenoData 內非 TEI 命名空間 https://yigua.art/ns/source-metadata/1.0 的 json 保存來源 JSON 原字串，供完整 metadata 回讀；它不是閱讀正文，也不是另一本古籍。TEI_all 一般 schema 驗證不能證明逐字讀法、影像可用性或校勘完備性。本編碼未提供專屬 TEI ODD 或完整校勘 apparatus。</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="lzh-Hant">古典漢語爻辭，保留來源可編碼用字</language>
+        <language ident="zh-Hant">資料說明</language>
+      </langUsage>
+    </profileDesc>
+    <xenoData>
+      <json xmlns="https://yigua.art/ns/source-metadata/1.0" mimeType="application/json" xml:space="preserve">{
+  &quot;meta&quot;: {
+    &quot;title&quot;: &quot;《御纂周易折中》武英殿刊本·六十四卦爻辭&quot;,
+    &quot;attribution&quot;: &quot;yigua.art網站轉譯&quot;,
+    &quot;attributionNote&quot;: &quot;依站主要求保留署名；實際工作為原刻影像轉錄與校對，非翻譯。&quot;,
+    &quot;edition&quot;: &quot;康熙五十四年（1715）武英殿刊本&quot;,
+    &quot;preparedBy&quot;: &quot;一卦 yigua.art / poplolioi11&quot;,
+    &quot;githubAccount&quot;: &quot;poplolioi11&quot;,
+    &quot;creatorUrl&quot;: &quot;https://github.com/poplolioi11&quot;,
+    &quot;projectUrl&quot;: &quot;https://github.com/poplolioi11/yigua-wuyingdian-lines&quot;,
+    &quot;metadataUpdatedAt&quot;: &quot;2026-10-10&quot;,
+    &quot;exportedAt&quot;: &quot;2026-10-07&quot;,
+    &quot;scope&quot;: &quot;64卦384爻及用九用六；不含卦辭、注解或全書。&quot;,
+    &quot;review&quot;: &quot;沿用網站現有 scan-reviewed 逐爻影像紀錄；本次匯出未另作全書二校，不保證無誤。&quot;,
+    &quot;rights&quot;: &quot;公有領域古籍原文，不因轉錄而新增限制。重用時請保留 yigua.art網站轉譯 署名、底本與逐爻影像來源。&quot;,
+    &quot;format&quot;: &quot;初爻至上爻排列；欄位中的冒號只用於分隔爻位與正文。&quot;,
+    &quot;sourceNote&quot;: &quot;哈佛燕京圖書館 T 235 4494；觀卦採明治大學同版別本。&quot;
+  },
+  &quot;hexagrams&quot;: [
+    {
+      &quot;number&quot;: 1,
+      &quot;name&quot;: &quot;乾&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：潛龍勿用&quot;,
+        &quot;九二：見龍在田利見大人&quot;,
+        &quot;九三：君子終日乾乾夕惕若厲无咎&quot;,
+        &quot;九四：或躍在淵无咎&quot;,
+        &quot;九五：飛龍在天利見大人&quot;,
+        &quot;上九：亢龍有悔&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765411&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765412&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765413&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765414&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765415&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765416&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;,
+      &quot;special&quot;: {
+        &quot;label&quot;: &quot;用九&quot;,
+        &quot;text&quot;: &quot;見羣龍无首吉&quot;
+      }
+    },
+    {
+      &quot;number&quot;: 2,
+      &quot;name&quot;: &quot;坤&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：履霜堅冰至&quot;,
+        &quot;六二：直方大不習无不利&quot;,
+        &quot;六三：含章可貞或從王事无成有終&quot;,
+        &quot;六四：括囊无咎无譽&quot;,
+        &quot;六五：黃裳元吉&quot;,
+        &quot;上六：龍戰于野其血玄黃&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765421&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765422&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765423&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765424&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765425&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765426&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;,
+      &quot;special&quot;: {
+        &quot;label&quot;: &quot;用六&quot;,
+        &quot;text&quot;: &quot;利永貞&quot;
+      }
+    },
+    {
+      &quot;number&quot;: 3,
+      &quot;name&quot;: &quot;屯&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：磐桓利居貞利建侯&quot;,
+        &quot;六二：屯如邅如乘馬班如匪寇婚媾女子貞不字十年乃字&quot;,
+        &quot;六三：即鹿无虞惟入于林中君子幾不如舍往吝&quot;,
+        &quot;六四：乘馬班如求婚媾往吉无不利&quot;,
+        &quot;九五：屯其膏小貞吉大貞凶&quot;,
+        &quot;上六：乘馬班如泣血漣如&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765428&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765429&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765430&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765431&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765431&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765432&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 4,
+      &quot;name&quot;: &quot;蒙&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：發蒙利用刑人用說桎梏以往吝&quot;,
+        &quot;九二：包蒙吉納婦吉子克家&quot;,
+        &quot;六三：勿用取女見金夫不有躬无攸利&quot;,
+        &quot;六四：困蒙吝&quot;,
+        &quot;六五：童蒙吉&quot;,
+        &quot;上九：擊蒙不利爲寇利禦寇&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765435&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765436&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765437&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765437&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765438&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765438&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 5,
+      &quot;name&quot;: &quot;需&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：需于郊利用恆无咎&quot;,
+        &quot;九二：需于沙小有言終吉&quot;,
+        &quot;九三：需于泥致寇至&quot;,
+        &quot;六四：需于血出自穴&quot;,
+        &quot;九五：需于酒食貞吉&quot;,
+        &quot;上六：入于穴有不速之客三人來敬之終吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765441&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765441&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765441&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765442&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765442&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765443&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 6,
+      &quot;name&quot;: &quot;訟&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：不永所事小有言終吉&quot;,
+        &quot;九二：不克訟歸而逋其邑人三百戶无眚&quot;,
+        &quot;六三：食舊德貞厲終吉或從王事无成&quot;,
+        &quot;九四：不克訟復即命渝安貞吉&quot;,
+        &quot;九五：訟元吉&quot;,
+        &quot;上九：或錫之鞶帶終朝三褫之&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765445&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765446&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765447&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765448&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765448&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765449&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 7,
+      &quot;name&quot;: &quot;師&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：師出以律否臧凶&quot;,
+        &quot;九二：在師中吉无咎王三錫命&quot;,
+        &quot;六三：師或輿尸凶&quot;,
+        &quot;六四：師左次无咎&quot;,
+        &quot;六五：田有禽利執言无咎長子帥師弟子輿尸貞凶&quot;,
+        &quot;上六：大君有命開國承家小人勿用&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765450&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765451&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765452&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765452&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765453&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765454&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 8,
+      &quot;name&quot;: &quot;比&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：有孚比之无咎有孚盈缶終來有它吉&quot;,
+        &quot;六二：比之自內貞吉&quot;,
+        &quot;六三：比之匪人&quot;,
+        &quot;六四：外比之貞吉&quot;,
+        &quot;九五：顯比王用三驅失前禽邑人不誡吉&quot;,
+        &quot;上六：比之无首凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765457&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765457&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765458&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765458&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765458&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765461&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 9,
+      &quot;name&quot;: &quot;小畜&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：復自道何其咎吉&quot;,
+        &quot;九二：牽復吉&quot;,
+        &quot;九三：輿說輻夫妻反目&quot;,
+        &quot;六四：有孚血去惕出无咎&quot;,
+        &quot;九五：有孚攣如富以其鄰&quot;,
+        &quot;上九：既雨既處尚德載婦貞厲月幾望君子征凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765463&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765464&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765465&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765465&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765466&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765467&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 10,
+      &quot;name&quot;: &quot;履&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：素履往无咎&quot;,
+        &quot;九二：履道坦坦幽人貞吉&quot;,
+        &quot;六三：眇能視跛能履履虎尾咥人凶武人為于大君&quot;,
+        &quot;九四：履虎尾愬愬終吉&quot;,
+        &quot;九五：夬履貞厲&quot;,
+        &quot;上九：視履考祥其旋元吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765469&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765469&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765470&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765471&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765472&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765473&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 11,
+      &quot;name&quot;: &quot;泰&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：拔茅茹以其彚征吉&quot;,
+        &quot;九二：包荒用馮河不遐遺朋亡得尚于中行&quot;,
+        &quot;九三：无平不陂无往不復艱貞无咎勿恤其孚于食有福&quot;,
+        &quot;六四：翩翩不富以其鄰不戒以孚&quot;,
+        &quot;六五：帝乙歸妹以祉元吉&quot;,
+        &quot;上六：城復于隍勿用師自邑告命貞吝&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765474&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765475&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765476&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765477&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765478&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765479&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 12,
+      &quot;name&quot;: &quot;否&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：拔茅茹以其彚貞吉亨&quot;,
+        &quot;六二：包承小人吉大人否亨&quot;,
+        &quot;六三：包羞&quot;,
+        &quot;九四：有命无咎疇離祉&quot;,
+        &quot;九五：休否大人吉其亡其亡繫于苞桑&quot;,
+        &quot;上九：傾否先否後喜&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765481&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765482&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765482&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765483&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765483&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765484&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 13,
+      &quot;name&quot;: &quot;同人&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：同人于門无咎&quot;,
+        &quot;六二：同人于宗吝&quot;,
+        &quot;九三：伏戎于莽升其高陵三歲不興&quot;,
+        &quot;九四：乘其墉弗克攻吉&quot;,
+        &quot;九五：同人先號咷而後笑大師克相遇&quot;,
+        &quot;上九：同人于郊无悔&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765486&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765486&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765486&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765487&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765488&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765489&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 14,
+      &quot;name&quot;: &quot;大有&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：无交害匪咎艱則无咎&quot;,
+        &quot;九二：大車以載有攸往无咎&quot;,
+        &quot;九三：公用亨于天子小人弗克&quot;,
+        &quot;九四：匪其彭无咎&quot;,
+        &quot;六五：厥孚交如威如吉&quot;,
+        &quot;上九：自天祐之吉无不利&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765491&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765491&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765491&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765492&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765492&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765493&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 15,
+      &quot;name&quot;: &quot;謙&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：謙謙君子用涉大川吉&quot;,
+        &quot;六二：鳴謙貞吉&quot;,
+        &quot;九三：勞謙君子有終吉&quot;,
+        &quot;六四：无不利撝謙&quot;,
+        &quot;六五：不富以其鄰利用侵伐无不利&quot;,
+        &quot;上六：鳴謙利用行師征邑國&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765500&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765501&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765501&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765502&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765502&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765503&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 16,
+      &quot;name&quot;: &quot;豫&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：鳴豫凶&quot;,
+        &quot;六二：介于石不終日貞吉&quot;,
+        &quot;六三：盱豫悔遲有悔&quot;,
+        &quot;九四：由豫大有得勿疑朋盍簪&quot;,
+        &quot;六五：貞疾恆不死&quot;,
+        &quot;上六：冥豫成有渝无咎&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765504&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765505&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765506&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765507&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765508&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765509&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 17,
+      &quot;name&quot;: &quot;隨&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：官有渝貞吉出門交有功&quot;,
+        &quot;六二：係小子失丈夫&quot;,
+        &quot;六三：係丈夫失小子隨有求得利居貞&quot;,
+        &quot;九四：隨有獲貞凶有孚在道以明何咎&quot;,
+        &quot;九五：孚于嘉吉&quot;,
+        &quot;上六：拘係之乃從維之王用亨于西山&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765510&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765512&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765512&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765513&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765514&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765514&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 18,
+      &quot;name&quot;: &quot;蠱&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：幹父之蠱有子考无咎厲終吉&quot;,
+        &quot;九二：幹母之蠱不可貞&quot;,
+        &quot;九三：幹父之蠱小有悔无大咎&quot;,
+        &quot;六四：裕父之蠱往見吝&quot;,
+        &quot;六五：幹父之蠱用譽&quot;,
+        &quot;上九：不事王侯高尚其事&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765517&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765518&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765518&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765519&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765519&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765520&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 19,
+      &quot;name&quot;: &quot;臨&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：咸臨貞吉&quot;,
+        &quot;九二：咸臨吉无不利&quot;,
+        &quot;六三：甘臨无攸利既憂之无咎&quot;,
+        &quot;六四：至臨无咎&quot;,
+        &quot;六五：知臨大君之宜吉&quot;,
+        &quot;上六：敦臨吉无咎&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765522&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765522&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765523&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765523&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765523&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765524&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 20,
+      &quot;name&quot;: &quot;觀&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：童觀小人无咎君子吝&quot;,
+        &quot;六二：闚觀利女貞&quot;,
+        &quot;六三：觀我生進退&quot;,
+        &quot;六四：觀國之光利用賓于王&quot;,
+        &quot;九五：觀我生君子无咎&quot;,
+        &quot;上九：觀其生君子无咎&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/11d8dc6e9fe24e8895b440c2a35a6b6a.jp2/full/full/0/default.jpg&quot;,
+        &quot;https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/70e7d7c895e64050844c827214d7a4d1.jp2/full/full/0/default.jpg&quot;,
+        &quot;https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/70e7d7c895e64050844c827214d7a4d1.jp2/full/full/0/default.jpg&quot;,
+        &quot;https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/2df3114ae47349efb8c1b565c48536ae.jp2/full/full/0/default.jpg&quot;,
+        &quot;https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/2df3114ae47349efb8c1b565c48536ae.jp2/full/full/0/default.jpg&quot;,
+        &quot;https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/57ed989e65274575933d89b910da8b53.jp2/full/full/0/default.jpg&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://m-archives.meiji.jp/content/detail/LI00000554&quot;
+    },
+    {
+      &quot;number&quot;: 21,
+      &quot;name&quot;: &quot;噬嗑&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：屨校滅趾无咎&quot;,
+        &quot;六二：噬膚滅鼻无咎&quot;,
+        &quot;六三：噬腊肉遇毒小吝无咎&quot;,
+        &quot;九四：噬乾胏得金矢利艱貞吉&quot;,
+        &quot;六五：噬乾肉得黃金貞厲无咎&quot;,
+        &quot;上九：何校滅耳凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765531&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765532&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765532&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765533&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765534&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765535&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 22,
+      &quot;name&quot;: &quot;賁&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：賁其趾舍車而徒&quot;,
+        &quot;六二：賁其須&quot;,
+        &quot;九三：賁如濡如永貞吉&quot;,
+        &quot;六四：賁如皤如白馬翰如匪寇婚媾&quot;,
+        &quot;六五：賁于丘園束帛戔戔吝終吉&quot;,
+        &quot;上九：白賁无咎&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765536&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765537&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765537&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765538&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765539&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765540&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 23,
+      &quot;name&quot;: &quot;剝&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：剝牀以足蔑貞凶&quot;,
+        &quot;六二：剝牀以辨蔑貞凶&quot;,
+        &quot;六三：剝之无咎&quot;,
+        &quot;六四：剝牀以膚凶&quot;,
+        &quot;六五：貫魚以宮人寵无不利&quot;,
+        &quot;上九：碩果不食君子得輿小人剝廬&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765543&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765543&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765543&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765544&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765544&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765545&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 24,
+      &quot;name&quot;: &quot;復&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：不遠復无祗悔元吉&quot;,
+        &quot;六二：休復吉&quot;,
+        &quot;六三：頻復厲无咎&quot;,
+        &quot;六四：中行獨復&quot;,
+        &quot;六五：敦復无悔&quot;,
+        &quot;上六：迷復凶有災眚用行師終有大敗以其國君凶至于十年不克征&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765547&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765548&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765548&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765549&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765549&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765550&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 25,
+      &quot;name&quot;: &quot;無妄&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：无妄往吉&quot;,
+        &quot;六二：不耕穫不菑畬則利有攸往&quot;,
+        &quot;六三：无妄之災或繫之牛行人之得邑人之災&quot;,
+        &quot;九四：可貞无咎&quot;,
+        &quot;九五：无妄之疾勿藥有喜&quot;,
+        &quot;上九：无妄行有眚无攸利&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765552&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765552&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765554&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765554&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765555&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765555&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 26,
+      &quot;name&quot;: &quot;大畜&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：有厲利已&quot;,
+        &quot;九二：輿說輹&quot;,
+        &quot;九三：良馬逐利艱貞曰閑輿衛利有攸往&quot;,
+        &quot;六四：童牛之牿元吉&quot;,
+        &quot;六五：豶豕之牙吉&quot;,
+        &quot;上九：何天之衢亨&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765557&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765557&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765558&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765558&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765559&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765559&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 27,
+      &quot;name&quot;: &quot;頤&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：舍爾靈龜觀我朶頤凶&quot;,
+        &quot;六二：顛頤拂經于丘頤征凶&quot;,
+        &quot;六三：拂頤貞凶十年勿用无攸利&quot;,
+        &quot;六四：顛頤吉虎視眈眈其欲逐逐无咎&quot;,
+        &quot;六五：拂經居貞吉不可涉大川&quot;,
+        &quot;上九：由頤厲吉利涉大川&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765562&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765563&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765564&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765565&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765566&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765567&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 28,
+      &quot;name&quot;: &quot;大過&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：藉用白茅无咎&quot;,
+        &quot;九二：枯楊生稊老夫得其女妻无不利&quot;,
+        &quot;九三：棟橈凶&quot;,
+        &quot;九四：棟隆吉有它吝&quot;,
+        &quot;九五：枯楊生華老婦得其士夫无咎无譽&quot;,
+        &quot;上六：過涉滅頂凶无咎&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765569&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765570&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765571&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765571&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765572&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765573&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 29,
+      &quot;name&quot;: &quot;坎&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：習坎入于坎窞凶&quot;,
+        &quot;九二：坎有險求小得&quot;,
+        &quot;六三：來之坎坎險且枕入于坎窞勿用&quot;,
+        &quot;六四：樽酒簋貳用缶納約自牖終无咎&quot;,
+        &quot;九五：坎不盈祗既平无咎&quot;,
+        &quot;上六：係用徽纆寘于叢棘三歲不得凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765575&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765576&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765576&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765577&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765578&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765579&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 30,
+      &quot;name&quot;: &quot;離&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：履錯然敬之无咎&quot;,
+        &quot;六二：黃離元吉&quot;,
+        &quot;九三：日昃之離不鼓缶而歌則大耋之嗟凶&quot;,
+        &quot;九四：突如其來如焚如死如棄如&quot;,
+        &quot;六五：出涕沱若戚嗟若吉&quot;,
+        &quot;上九：王用出征有嘉折首獲匪其醜无咎&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765580&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765581&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765582&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765583&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765583&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765584&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 31,
+      &quot;name&quot;: &quot;咸&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：咸其拇&quot;,
+        &quot;六二：咸其腓凶居吉&quot;,
+        &quot;九三：咸其股執其隨往吝&quot;,
+        &quot;九四：貞吉悔亡憧憧往來朋從爾思&quot;,
+        &quot;九五：咸其脢无悔&quot;,
+        &quot;上六：咸其輔頰舌&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765591&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765592&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765592&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765593&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765596&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765596&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 32,
+      &quot;name&quot;: &quot;恆&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：浚恆貞凶无攸利&quot;,
+        &quot;九二：悔亡&quot;,
+        &quot;九三：不恆其德或承之羞貞吝&quot;,
+        &quot;九四：田无禽&quot;,
+        &quot;六五：恆其德貞婦人吉夫子凶&quot;,
+        &quot;上六：振恆凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765598&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765599&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765600&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765600&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765601&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765601&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 33,
+      &quot;name&quot;: &quot;遯&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：遯尾厲勿用有攸往&quot;,
+        &quot;六二：執之用黃牛之革莫之勝說&quot;,
+        &quot;九三：係遯有疾厲畜臣妾吉&quot;,
+        &quot;九四：好遯君子吉小人否&quot;,
+        &quot;九五：嘉遯貞吉&quot;,
+        &quot;上九：肥遯无不利&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765603&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765604&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765605&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765606&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765607&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765607&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 34,
+      &quot;name&quot;: &quot;大壯&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：壯于趾征凶有孚&quot;,
+        &quot;九二：貞吉&quot;,
+        &quot;九三：小人用壯君子用罔貞厲羝羊觸藩羸其角&quot;,
+        &quot;九四：貞吉悔亡藩決不羸壯于大輿之輹&quot;,
+        &quot;六五：喪羊于易无悔&quot;,
+        &quot;上六：羝羊觸藩不能退不能遂无攸利艱則吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765608&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765608&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765609&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765610&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765611&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765611&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 35,
+      &quot;name&quot;: &quot;晉&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：晉如摧如貞吉罔孚裕无咎&quot;,
+        &quot;六二：晉如愁如貞吉受茲介福于其王母&quot;,
+        &quot;六三：衆允悔亡&quot;,
+        &quot;九四：晉如鼫鼠貞厲&quot;,
+        &quot;六五：悔亡失得勿恤往吉无不利&quot;,
+        &quot;上九：晉其角維用伐邑厲吉无咎貞吝&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765613&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765614&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765615&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765615&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765616&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765616&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 36,
+      &quot;name&quot;: &quot;明夷&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：明夷于飛垂其翼君子于行三日不食有攸往主人有言&quot;,
+        &quot;六二：明夷夷于左股用拯馬壯吉&quot;,
+        &quot;九三：明夷于南狩得其大首不可疾貞&quot;,
+        &quot;六四：入于左腹獲明夷之心于出門庭&quot;,
+        &quot;六五：箕子之明夷利貞&quot;,
+        &quot;上六：不明晦初登于天後入于地&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765618&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765619&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765620&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765621&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765622&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765622&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 37,
+      &quot;name&quot;: &quot;家人&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：閑有家悔亡&quot;,
+        &quot;六二：无攸遂在中饋貞吉&quot;,
+        &quot;九三：家人嗃嗃悔厲吉婦子嘻嘻終吝&quot;,
+        &quot;六四：富家大吉&quot;,
+        &quot;九五：王假有家勿恤吉&quot;,
+        &quot;上九：有孚威如終吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765624&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765624&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765625&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765626&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765626&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765627&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 38,
+      &quot;name&quot;: &quot;睽&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：悔亡喪馬勿逐自復見惡人无咎&quot;,
+        &quot;九二：遇主于巷无咎&quot;,
+        &quot;六三：見輿曳其牛掣其人天且劓无初有終&quot;,
+        &quot;九四：睽孤遇元夫交孚厲无咎&quot;,
+        &quot;六五：悔亡厥宗噬膚往何咎&quot;,
+        &quot;上九：睽孤見豕負塗載鬼一車先張之弧後說之弧匪寇婚媾往遇雨則吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765628&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765630&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765630&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765631&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765632&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765633&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 39,
+      &quot;name&quot;: &quot;蹇&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：往蹇來譽&quot;,
+        &quot;六二：王臣蹇蹇匪躬之故&quot;,
+        &quot;九三：往蹇來反&quot;,
+        &quot;六四：往蹇來連&quot;,
+        &quot;九五：大蹇朋來&quot;,
+        &quot;上六：往蹇來碩吉利見大人&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765635&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765636&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765637&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765637&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765637&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765638&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 40,
+      &quot;name&quot;: &quot;解&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：无咎&quot;,
+        &quot;九二：田獲三狐得黃矢貞吉&quot;,
+        &quot;六三：負且乘致寇至貞吝&quot;,
+        &quot;九四：解而拇朋至斯孚&quot;,
+        &quot;六五：君子維有解吉有孚于小人&quot;,
+        &quot;上六：公用射隼于高墉之上獲之无不利&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765642&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765642&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765643&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765644&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765644&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765645&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 41,
+      &quot;name&quot;: &quot;損&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：已事遄往无咎酌損之&quot;,
+        &quot;九二：利貞征凶弗損益之&quot;,
+        &quot;六三：三人行則損一人一人行則得其友&quot;,
+        &quot;六四：損其疾使遄有喜无咎&quot;,
+        &quot;六五：或益之十朋之龜弗克違元吉&quot;,
+        &quot;上九：弗損益之无咎貞吉利有攸往得臣无家&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765648&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765648&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765649&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765650&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765650&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765651&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;,
+      &quot;sourceNote&quot;: &quot;上九大字中段印墨缺損；貞吉利有攸往另見同頁程傳逐句引文，得臣无家另見次頁16765652集說引文；不採現代轉錄補文。&quot;
+    },
+    {
+      &quot;number&quot;: 42,
+      &quot;name&quot;: &quot;益&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：利用爲大作元吉无咎&quot;,
+        &quot;六二：或益之十朋之龜弗克違永貞吉王用享于帝吉&quot;,
+        &quot;六三：益之用凶事无咎有孚中行告公用圭&quot;,
+        &quot;六四：中行告公從利用爲依遷國&quot;,
+        &quot;九五：有孚惠心勿問元吉有孚惠我德&quot;,
+        &quot;上九：莫益之或擊之立心勿恆凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765653&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765654&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765655&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765657&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765657&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765658&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 43,
+      &quot;name&quot;: &quot;夬&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：壯于前趾往不勝爲咎&quot;,
+        &quot;九二：惕號莫夜有戎勿恤&quot;,
+        &quot;九三：壯于頄有凶君子夬夬獨行遇雨若濡有慍无咎&quot;,
+        &quot;九四：臀无膚其行次且牽羊悔亡聞言不信&quot;,
+        &quot;九五：莧陸夬夬中行无咎&quot;,
+        &quot;上六：无號終有凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765660&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765661&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765662&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765663&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765664&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765665&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 44,
+      &quot;name&quot;: &quot;姤&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：繫于金柅貞吉有攸往見凶羸豕孚蹢躅&quot;,
+        &quot;九二：包有魚无咎不利賓&quot;,
+        &quot;九三：臀无膚其行次且厲无大咎&quot;,
+        &quot;九四：包无魚起凶&quot;,
+        &quot;九五：以杞包瓜含章有隕自天&quot;,
+        &quot;上九：姤其角吝无咎&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765667&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765667&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765668&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765669&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765670&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765670&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 45,
+      &quot;name&quot;: &quot;萃&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：有孚不終乃亂乃萃若號一握爲笑勿恤往无咎&quot;,
+        &quot;六二：引吉无咎孚乃利用禴&quot;,
+        &quot;六三：萃如嗟如无攸利往无咎小吝&quot;,
+        &quot;九四：大吉无咎&quot;,
+        &quot;九五：萃有位无咎匪孚元永貞悔亡&quot;,
+        &quot;上六：齎咨涕洟无咎&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765673&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765674&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765675&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765676&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765676&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765677&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 46,
+      &quot;name&quot;: &quot;升&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：允升大吉&quot;,
+        &quot;九二：孚乃利用禴无咎&quot;,
+        &quot;九三：升虛邑&quot;,
+        &quot;六四：王用亨于岐山吉无咎&quot;,
+        &quot;六五：貞吉升階&quot;,
+        &quot;上六：冥升利于不息之貞&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765679&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765679&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765680&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765680&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765681&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765681&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 47,
+      &quot;name&quot;: &quot;困&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：臀困于株木入于幽谷三歲不覿&quot;,
+        &quot;九二：困于酒食朱紱方來利用亨祀征凶无咎&quot;,
+        &quot;六三：困于石據于蒺藜入于其宮不見其妻凶&quot;,
+        &quot;九四：來徐徐困于金車吝有終&quot;,
+        &quot;九五：劓刖困于赤紱乃徐有說利用祭祀&quot;,
+        &quot;上六：困于葛藟于臲卼曰動悔有悔征吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765683&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765684&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765685&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765685&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765686&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765687&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 48,
+      &quot;name&quot;: &quot;井&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：井泥不食舊井无禽&quot;,
+        &quot;九二：井谷射鮒甕敝漏&quot;,
+        &quot;九三：井渫不食爲我心惻可用汲王明並受其福&quot;,
+        &quot;六四：井甃无咎&quot;,
+        &quot;九五：井洌寒泉食&quot;,
+        &quot;上六：井收勿幕有孚元吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765694&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765695&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765696&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765696&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765697&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765697&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 49,
+      &quot;name&quot;: &quot;革&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：鞏用黃牛之革&quot;,
+        &quot;六二：已日乃革之征吉无咎&quot;,
+        &quot;九三：征凶貞厲革言三就有孚&quot;,
+        &quot;九四：悔亡有孚改命吉&quot;,
+        &quot;九五：大人虎變未占有孚&quot;,
+        &quot;上六：君子豹變小人革面征凶居貞吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765699&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765700&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765701&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765701&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765702&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765703&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 50,
+      &quot;name&quot;: &quot;鼎&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：鼎顛趾利出否得妾以其子无咎&quot;,
+        &quot;九二：鼎有實我仇有疾不我能即吉&quot;,
+        &quot;九三：鼎耳革其行塞雉膏不食方雨虧悔終吉&quot;,
+        &quot;九四：鼎折足覆公餗其形渥凶&quot;,
+        &quot;六五：鼎黃耳金鉉利貞&quot;,
+        &quot;上九：鼎玉鉉大吉无不利&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765706&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765707&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765707&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765708&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765709&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765710&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 51,
+      &quot;name&quot;: &quot;震&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：震來虩虩後笑言啞啞吉&quot;,
+        &quot;六二：震來厲億喪貝躋于九陵勿逐七日得&quot;,
+        &quot;六三：震蘇蘇震行无眚&quot;,
+        &quot;九四：震遂泥&quot;,
+        &quot;六五：震往來厲億无喪有事&quot;,
+        &quot;上六：震索索視矍矍征凶震不于其躬于其鄰无咎婚媾有言&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765713&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765713&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765714&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765715&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765715&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765716&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 52,
+      &quot;name&quot;: &quot;艮&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：艮其趾无咎利永貞&quot;,
+        &quot;六二：艮其腓不拯其隨其心不快&quot;,
+        &quot;九三：艮其限列其夤厲薰心&quot;,
+        &quot;六四：艮其身无咎&quot;,
+        &quot;六五：艮其輔言有序悔亡&quot;,
+        &quot;上九：敦艮吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765719&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765720&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765720&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765722&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765722&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765723&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 53,
+      &quot;name&quot;: &quot;漸&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：鴻漸于干小子厲有言无咎&quot;,
+        &quot;六二：鴻漸于磐飲食衎衎吉&quot;,
+        &quot;九三：鴻漸于陸夫征不復婦孕不育凶利禦寇&quot;,
+        &quot;六四：鴻漸于木或得其桷无咎&quot;,
+        &quot;九五：鴻漸于陵婦三歲不孕終莫之勝吉&quot;,
+        &quot;上九：鴻漸于陸其羽可用爲儀吉&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765725&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765726&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765726&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765727&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765727&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765728&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 54,
+      &quot;name&quot;: &quot;歸妹&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：歸妹以娣跛能履征吉&quot;,
+        &quot;九二：眇能視利幽人之貞&quot;,
+        &quot;六三：歸妹以須反歸以娣&quot;,
+        &quot;九四：歸妹愆期遲歸有時&quot;,
+        &quot;六五：帝乙歸妹其君之袂不如其娣之袂良月幾望吉&quot;,
+        &quot;上六：女承筐无實士刲羊无血无攸利&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765731&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765731&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765732&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765733&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765733&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765734&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 55,
+      &quot;name&quot;: &quot;豐&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：遇其配主雖旬无咎往有尚&quot;,
+        &quot;六二：豐其蔀日中見斗往得疑疾有孚發若吉&quot;,
+        &quot;九三：豐其沛日中見沬折其右肱无咎&quot;,
+        &quot;九四：豐其蔀日中見斗遇其夷主吉&quot;,
+        &quot;六五：來章有慶譽吉&quot;,
+        &quot;上六：豐其屋蔀其家闚其戶闃其无人三歲不覿凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765735&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765736&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765737&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765738&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765739&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765740&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 56,
+      &quot;name&quot;: &quot;旅&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：旅瑣瑣斯其所取災&quot;,
+        &quot;六二：旅即次懷其資得童僕貞&quot;,
+        &quot;九三：旅焚其次喪其童僕貞厲&quot;,
+        &quot;九四：旅于處得其資斧我心不快&quot;,
+        &quot;六五：射雉一矢亡終以譽命&quot;,
+        &quot;上九：鳥焚其巢旅人先笑後號咷喪牛于易凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765742&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765742&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765743&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765743&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765744&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765745&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 57,
+      &quot;name&quot;: &quot;巽&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：進退利武人之貞&quot;,
+        &quot;九二：巽在牀下用史巫紛若吉无咎&quot;,
+        &quot;九三：頻巽吝&quot;,
+        &quot;六四：悔亡田獲三品&quot;,
+        &quot;九五：貞吉悔亡无不利无初有終先庚三日後庚三日吉&quot;,
+        &quot;上九：巽在牀下喪其資斧貞凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765746&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765747&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765748&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765748&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765749&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765750&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 58,
+      &quot;name&quot;: &quot;兌&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：和兌吉&quot;,
+        &quot;九二：孚兌吉悔亡&quot;,
+        &quot;六三：來兌凶&quot;,
+        &quot;九四：商兌未寧介疾有喜&quot;,
+        &quot;九五：孚于剝有厲&quot;,
+        &quot;上六：引兌&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765752&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765752&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765752&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765753&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765753&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765755&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 59,
+      &quot;name&quot;: &quot;渙&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：用拯馬壯吉&quot;,
+        &quot;九二：渙奔其机悔亡&quot;,
+        &quot;六三：渙其躬无悔&quot;,
+        &quot;六四：渙其羣元吉渙有丘匪夷所思&quot;,
+        &quot;九五：渙汗其大號渙王居无咎&quot;,
+        &quot;上九：渙其血去逖出无咎&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765756&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765756&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765757&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765757&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765758&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765760&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 60,
+      &quot;name&quot;: &quot;節&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：不出戶庭无咎&quot;,
+        &quot;九二：不出門庭凶&quot;,
+        &quot;六三：不節若則嗟若无咎&quot;,
+        &quot;六四：安節亨&quot;,
+        &quot;九五：甘節吉往有尚&quot;,
+        &quot;上六：苦節貞凶悔亡&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765761&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765761&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765762&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765763&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765763&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765763&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 61,
+      &quot;name&quot;: &quot;中孚&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：虞吉有他不燕&quot;,
+        &quot;九二：鳴鶴在陰其子和之我有好爵吾與爾靡之&quot;,
+        &quot;六三：得敵或鼓或罷或泣或歌&quot;,
+        &quot;六四：月幾望馬匹亡无咎&quot;,
+        &quot;九五：有孚攣如无咎&quot;,
+        &quot;上九：翰音登于天貞凶&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765766&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765767&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765768&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765768&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765769&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765770&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 62,
+      &quot;name&quot;: &quot;小過&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：飛鳥以凶&quot;,
+        &quot;六二：過其祖遇其妣不及其君遇其臣无咎&quot;,
+        &quot;九三：弗過防之從或戕之凶&quot;,
+        &quot;九四：无咎弗過遇之往厲必戒勿用永貞&quot;,
+        &quot;六五：密雲不雨自我西郊公弋取彼在穴&quot;,
+        &quot;上六：弗遇過之飛鳥離之凶是謂災眚&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765772&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765773&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765774&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765775&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765776&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765776&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 63,
+      &quot;name&quot;: &quot;既濟&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初九：曳其輪濡其尾无咎&quot;,
+        &quot;六二：婦喪其茀勿逐七日得&quot;,
+        &quot;九三：高宗伐鬼方三年克之小人勿用&quot;,
+        &quot;六四：繻有衣袽終日戒&quot;,
+        &quot;九五：東鄰殺牛不如西鄰之禴祭實受其福&quot;,
+        &quot;上六：濡其首厲&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765779&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765779&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765780&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765781&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765781&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765782&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    },
+    {
+      &quot;number&quot;: 64,
+      &quot;name&quot;: &quot;未濟&quot;,
+      &quot;status&quot;: &quot;scan-reviewed&quot;,
+      &quot;lines&quot;: [
+        &quot;初六：濡其尾吝&quot;,
+        &quot;九二：曳其輪貞吉&quot;,
+        &quot;六三：未濟征凶利涉大川&quot;,
+        &quot;九四：貞吉悔亡震用伐鬼方三年有賞于大國&quot;,
+        &quot;六五：貞吉无悔君子之光有孚吉&quot;,
+        &quot;上九：有孚于飲酒无咎濡其首有孚失是&quot;
+      ],
+      &quot;lineSources&quot;: [
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765783&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765784&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765784&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765785&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765786&quot;,
+        &quot;https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765787&quot;
+      ],
+      &quot;source&quot;: &quot;《御纂周易折中》康熙五十四年武英殿刊本（1715）&quot;,
+      &quot;sourceUrl&quot;: &quot;https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW&quot;
+    }
+  ]
+}
+</json>
+    </xenoData>
+    <revisionDesc>
+      <change when="2026-10-11">建立 TEI 格式編碼 0.1.0；保留來源匯出日期、metadata 日期與既有校對限制。沒有執行新一輪原刻影像全校。</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:lang="lzh-Hant">
+    <body>
+      <div xml:id="h01" type="hexagram" n="1" corresp="#source-harvard">
+        <head>乾</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h01-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765411">初九：潛龍勿用</ab>
+        <ab xml:id="h01-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765412">九二：見龍在田利見大人</ab>
+        <ab xml:id="h01-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765413">九三：君子終日乾乾夕惕若厲无咎</ab>
+        <ab xml:id="h01-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765414">九四：或躍在淵无咎</ab>
+        <ab xml:id="h01-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765415">九五：飛龍在天利見大人</ab>
+        <ab xml:id="h01-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765416">上九：亢龍有悔</ab>
+        <ab xml:id="h01-special" type="special" n="用九">用九：見羣龍无首吉</ab>
+        <note type="special-source-gap" corresp="#h01-special">來源 JSON 未附用九各自獨立的原頁來源；不將六條普通爻辭的 lineSources 自動當成此則用辭的獨立證據。</note>
+      </div>
+      <div xml:id="h02" type="hexagram" n="2" corresp="#source-harvard">
+        <head>坤</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h02-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765421">初六：履霜堅冰至</ab>
+        <ab xml:id="h02-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765422">六二：直方大不習无不利</ab>
+        <ab xml:id="h02-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765423">六三：含章可貞或從王事无成有終</ab>
+        <ab xml:id="h02-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765424">六四：括囊无咎无譽</ab>
+        <ab xml:id="h02-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765425">六五：黃裳元吉</ab>
+        <ab xml:id="h02-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765426">上六：龍戰于野其血玄黃</ab>
+        <ab xml:id="h02-special" type="special" n="用六">用六：利永貞</ab>
+        <note type="special-source-gap" corresp="#h02-special">來源 JSON 未附用六各自獨立的原頁來源；不將六條普通爻辭的 lineSources 自動當成此則用辭的獨立證據。</note>
+      </div>
+      <div xml:id="h03" type="hexagram" n="3" corresp="#source-harvard">
+        <head>屯</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h03-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765428">初九：磐桓利居貞利建侯</ab>
+        <ab xml:id="h03-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765429">六二：屯如邅如乘馬班如匪寇婚媾女子貞不字十年乃字</ab>
+        <ab xml:id="h03-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765430">六三：即鹿无虞惟入于林中君子幾不如舍往吝</ab>
+        <ab xml:id="h03-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765431">六四：乘馬班如求婚媾往吉无不利</ab>
+        <ab xml:id="h03-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765431">九五：屯其膏小貞吉大貞凶</ab>
+        <ab xml:id="h03-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765432">上六：乘馬班如泣血漣如</ab>
+      </div>
+      <div xml:id="h04" type="hexagram" n="4" corresp="#source-harvard">
+        <head>蒙</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h04-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765435">初六：發蒙利用刑人用說桎梏以往吝</ab>
+        <ab xml:id="h04-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765436">九二：包蒙吉納婦吉子克家</ab>
+        <ab xml:id="h04-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765437">六三：勿用取女見金夫不有躬无攸利</ab>
+        <ab xml:id="h04-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765437">六四：困蒙吝</ab>
+        <ab xml:id="h04-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765438">六五：童蒙吉</ab>
+        <ab xml:id="h04-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765438">上九：擊蒙不利爲寇利禦寇</ab>
+      </div>
+      <div xml:id="h05" type="hexagram" n="5" corresp="#source-harvard">
+        <head>需</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h05-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765441">初九：需于郊利用恆无咎</ab>
+        <ab xml:id="h05-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765441">九二：需于沙小有言終吉</ab>
+        <ab xml:id="h05-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765441">九三：需于泥致寇至</ab>
+        <ab xml:id="h05-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765442">六四：需于血出自穴</ab>
+        <ab xml:id="h05-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765442">九五：需于酒食貞吉</ab>
+        <ab xml:id="h05-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765443">上六：入于穴有不速之客三人來敬之終吉</ab>
+      </div>
+      <div xml:id="h06" type="hexagram" n="6" corresp="#source-harvard">
+        <head>訟</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h06-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765445">初六：不永所事小有言終吉</ab>
+        <ab xml:id="h06-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765446">九二：不克訟歸而逋其邑人三百戶无眚</ab>
+        <ab xml:id="h06-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765447">六三：食舊德貞厲終吉或從王事无成</ab>
+        <ab xml:id="h06-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765448">九四：不克訟復即命渝安貞吉</ab>
+        <ab xml:id="h06-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765448">九五：訟元吉</ab>
+        <ab xml:id="h06-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765449">上九：或錫之鞶帶終朝三褫之</ab>
+      </div>
+      <div xml:id="h07" type="hexagram" n="7" corresp="#source-harvard">
+        <head>師</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h07-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765450">初六：師出以律否臧凶</ab>
+        <ab xml:id="h07-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765451">九二：在師中吉无咎王三錫命</ab>
+        <ab xml:id="h07-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765452">六三：師或輿尸凶</ab>
+        <ab xml:id="h07-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765452">六四：師左次无咎</ab>
+        <ab xml:id="h07-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765453">六五：田有禽利執言无咎長子帥師弟子輿尸貞凶</ab>
+        <ab xml:id="h07-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765454">上六：大君有命開國承家小人勿用</ab>
+      </div>
+      <div xml:id="h08" type="hexagram" n="8" corresp="#source-harvard">
+        <head>比</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h08-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765457">初六：有孚比之无咎有孚盈缶終來有它吉</ab>
+        <ab xml:id="h08-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765457">六二：比之自內貞吉</ab>
+        <ab xml:id="h08-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765458">六三：比之匪人</ab>
+        <ab xml:id="h08-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765458">六四：外比之貞吉</ab>
+        <ab xml:id="h08-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765458">九五：顯比王用三驅失前禽邑人不誡吉</ab>
+        <ab xml:id="h08-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765461">上六：比之无首凶</ab>
+      </div>
+      <div xml:id="h09" type="hexagram" n="9" corresp="#source-harvard">
+        <head>小畜</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h09-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765463">初九：復自道何其咎吉</ab>
+        <ab xml:id="h09-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765464">九二：牽復吉</ab>
+        <ab xml:id="h09-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765465">九三：輿說輻夫妻反目</ab>
+        <ab xml:id="h09-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765465">六四：有孚血去惕出无咎</ab>
+        <ab xml:id="h09-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765466">九五：有孚攣如富以其鄰</ab>
+        <ab xml:id="h09-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765467">上九：既雨既處尚德載婦貞厲月幾望君子征凶</ab>
+      </div>
+      <div xml:id="h10" type="hexagram" n="10" corresp="#source-harvard">
+        <head>履</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h10-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765469">初九：素履往无咎</ab>
+        <ab xml:id="h10-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765469">九二：履道坦坦幽人貞吉</ab>
+        <ab xml:id="h10-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765470">六三：眇能視跛能履履虎尾咥人凶武人為于大君</ab>
+        <ab xml:id="h10-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765471">九四：履虎尾愬愬終吉</ab>
+        <ab xml:id="h10-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765472">九五：夬履貞厲</ab>
+        <ab xml:id="h10-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765473">上九：視履考祥其旋元吉</ab>
+      </div>
+      <div xml:id="h11" type="hexagram" n="11" corresp="#source-harvard">
+        <head>泰</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h11-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765474">初九：拔茅茹以其彚征吉</ab>
+        <ab xml:id="h11-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765475">九二：包荒用馮河不遐遺朋亡得尚于中行</ab>
+        <ab xml:id="h11-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765476">九三：无平不陂无往不復艱貞无咎勿恤其孚于食有福</ab>
+        <ab xml:id="h11-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765477">六四：翩翩不富以其鄰不戒以孚</ab>
+        <ab xml:id="h11-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765478">六五：帝乙歸妹以祉元吉</ab>
+        <ab xml:id="h11-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765479">上六：城復于隍勿用師自邑告命貞吝</ab>
+      </div>
+      <div xml:id="h12" type="hexagram" n="12" corresp="#source-harvard">
+        <head>否</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h12-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765481">初六：拔茅茹以其彚貞吉亨</ab>
+        <ab xml:id="h12-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765482">六二：包承小人吉大人否亨</ab>
+        <ab xml:id="h12-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765482">六三：包羞</ab>
+        <ab xml:id="h12-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765483">九四：有命无咎疇離祉</ab>
+        <ab xml:id="h12-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765483">九五：休否大人吉其亡其亡繫于苞桑</ab>
+        <ab xml:id="h12-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765484">上九：傾否先否後喜</ab>
+      </div>
+      <div xml:id="h13" type="hexagram" n="13" corresp="#source-harvard">
+        <head>同人</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h13-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765486">初九：同人于門无咎</ab>
+        <ab xml:id="h13-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765486">六二：同人于宗吝</ab>
+        <ab xml:id="h13-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765486">九三：伏戎于莽升其高陵三歲不興</ab>
+        <ab xml:id="h13-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765487">九四：乘其墉弗克攻吉</ab>
+        <ab xml:id="h13-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765488">九五：同人先號咷而後笑大師克相遇</ab>
+        <ab xml:id="h13-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765489">上九：同人于郊无悔</ab>
+      </div>
+      <div xml:id="h14" type="hexagram" n="14" corresp="#source-harvard">
+        <head>大有</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h14-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765491">初九：无交害匪咎艱則无咎</ab>
+        <ab xml:id="h14-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765491">九二：大車以載有攸往无咎</ab>
+        <ab xml:id="h14-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765491">九三：公用亨于天子小人弗克</ab>
+        <ab xml:id="h14-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765492">九四：匪其彭无咎</ab>
+        <ab xml:id="h14-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765492">六五：厥孚交如威如吉</ab>
+        <ab xml:id="h14-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765493">上九：自天祐之吉无不利</ab>
+      </div>
+      <div xml:id="h15" type="hexagram" n="15" corresp="#source-harvard">
+        <head>謙</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h15-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765500">初六：謙謙君子用涉大川吉</ab>
+        <ab xml:id="h15-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765501">六二：鳴謙貞吉</ab>
+        <ab xml:id="h15-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765501">九三：勞謙君子有終吉</ab>
+        <ab xml:id="h15-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765502">六四：无不利撝謙</ab>
+        <ab xml:id="h15-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765502">六五：不富以其鄰利用侵伐无不利</ab>
+        <ab xml:id="h15-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765503">上六：鳴謙利用行師征邑國</ab>
+      </div>
+      <div xml:id="h16" type="hexagram" n="16" corresp="#source-harvard">
+        <head>豫</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h16-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765504">初六：鳴豫凶</ab>
+        <ab xml:id="h16-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765505">六二：介于石不終日貞吉</ab>
+        <ab xml:id="h16-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765506">六三：盱豫悔遲有悔</ab>
+        <ab xml:id="h16-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765507">九四：由豫大有得勿疑朋盍簪</ab>
+        <ab xml:id="h16-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765508">六五：貞疾恆不死</ab>
+        <ab xml:id="h16-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765509">上六：冥豫成有渝无咎</ab>
+      </div>
+      <div xml:id="h17" type="hexagram" n="17" corresp="#source-harvard">
+        <head>隨</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h17-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765510">初九：官有渝貞吉出門交有功</ab>
+        <ab xml:id="h17-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765512">六二：係小子失丈夫</ab>
+        <ab xml:id="h17-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765512">六三：係丈夫失小子隨有求得利居貞</ab>
+        <ab xml:id="h17-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765513">九四：隨有獲貞凶有孚在道以明何咎</ab>
+        <ab xml:id="h17-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765514">九五：孚于嘉吉</ab>
+        <ab xml:id="h17-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765514">上六：拘係之乃從維之王用亨于西山</ab>
+      </div>
+      <div xml:id="h18" type="hexagram" n="18" corresp="#source-harvard">
+        <head>蠱</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h18-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765517">初六：幹父之蠱有子考无咎厲終吉</ab>
+        <ab xml:id="h18-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765518">九二：幹母之蠱不可貞</ab>
+        <ab xml:id="h18-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765518">九三：幹父之蠱小有悔无大咎</ab>
+        <ab xml:id="h18-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765519">六四：裕父之蠱往見吝</ab>
+        <ab xml:id="h18-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765519">六五：幹父之蠱用譽</ab>
+        <ab xml:id="h18-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765520">上九：不事王侯高尚其事</ab>
+      </div>
+      <div xml:id="h19" type="hexagram" n="19" corresp="#source-harvard">
+        <head>臨</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h19-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765522">初九：咸臨貞吉</ab>
+        <ab xml:id="h19-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765522">九二：咸臨吉无不利</ab>
+        <ab xml:id="h19-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765523">六三：甘臨无攸利既憂之无咎</ab>
+        <ab xml:id="h19-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765523">六四：至臨无咎</ab>
+        <ab xml:id="h19-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765523">六五：知臨大君之宜吉</ab>
+        <ab xml:id="h19-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765524">上六：敦臨吉无咎</ab>
+      </div>
+      <div xml:id="h20" type="hexagram" n="20" corresp="#source-meiji">
+        <head>觀</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://m-archives.meiji.jp/content/detail/LI00000554">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h20-l1" type="ordinary" n="1" facs="https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/11d8dc6e9fe24e8895b440c2a35a6b6a.jp2/full/full/0/default.jpg">初六：童觀小人无咎君子吝</ab>
+        <ab xml:id="h20-l2" type="ordinary" n="2" facs="https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/70e7d7c895e64050844c827214d7a4d1.jp2/full/full/0/default.jpg">六二：闚觀利女貞</ab>
+        <ab xml:id="h20-l3" type="ordinary" n="3" facs="https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/70e7d7c895e64050844c827214d7a4d1.jp2/full/full/0/default.jpg">六三：觀我生進退</ab>
+        <ab xml:id="h20-l4" type="ordinary" n="4" facs="https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/2df3114ae47349efb8c1b565c48536ae.jp2/full/full/0/default.jpg">六四：觀國之光利用賓于王</ab>
+        <ab xml:id="h20-l5" type="ordinary" n="5" facs="https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/2df3114ae47349efb8c1b565c48536ae.jp2/full/full/0/default.jpg">九五：觀我生君子无咎</ab>
+        <ab xml:id="h20-l6" type="ordinary" n="6" facs="https://m-archives.meiji.jp/api/meiji-da/Library/LI00000554/contents/57ed989e65274575933d89b910da8b53.jp2/full/full/0/default.jpg">上九：觀其生君子无咎</ab>
+      </div>
+      <div xml:id="h21" type="hexagram" n="21" corresp="#source-harvard">
+        <head>噬嗑</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h21-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765531">初九：屨校滅趾无咎</ab>
+        <ab xml:id="h21-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765532">六二：噬膚滅鼻无咎</ab>
+        <ab xml:id="h21-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765532">六三：噬腊肉遇毒小吝无咎</ab>
+        <ab xml:id="h21-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765533">九四：噬乾胏得金矢利艱貞吉</ab>
+        <ab xml:id="h21-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765534">六五：噬乾肉得黃金貞厲无咎</ab>
+        <ab xml:id="h21-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765535">上九：何校滅耳凶</ab>
+      </div>
+      <div xml:id="h22" type="hexagram" n="22" corresp="#source-harvard">
+        <head>賁</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h22-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765536">初九：賁其趾舍車而徒</ab>
+        <ab xml:id="h22-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765537">六二：賁其須</ab>
+        <ab xml:id="h22-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765537">九三：賁如濡如永貞吉</ab>
+        <ab xml:id="h22-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765538">六四：賁如皤如白馬翰如匪寇婚媾</ab>
+        <ab xml:id="h22-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765539">六五：賁于丘園束帛戔戔吝終吉</ab>
+        <ab xml:id="h22-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765540">上九：白賁无咎</ab>
+      </div>
+      <div xml:id="h23" type="hexagram" n="23" corresp="#source-harvard">
+        <head>剝</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h23-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765543">初六：剝牀以足蔑貞凶</ab>
+        <ab xml:id="h23-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765543">六二：剝牀以辨蔑貞凶</ab>
+        <ab xml:id="h23-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765543">六三：剝之无咎</ab>
+        <ab xml:id="h23-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765544">六四：剝牀以膚凶</ab>
+        <ab xml:id="h23-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765544">六五：貫魚以宮人寵无不利</ab>
+        <ab xml:id="h23-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765545">上九：碩果不食君子得輿小人剝廬</ab>
+      </div>
+      <div xml:id="h24" type="hexagram" n="24" corresp="#source-harvard">
+        <head>復</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h24-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765547">初九：不遠復无祗悔元吉</ab>
+        <ab xml:id="h24-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765548">六二：休復吉</ab>
+        <ab xml:id="h24-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765548">六三：頻復厲无咎</ab>
+        <ab xml:id="h24-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765549">六四：中行獨復</ab>
+        <ab xml:id="h24-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765549">六五：敦復无悔</ab>
+        <ab xml:id="h24-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765550">上六：迷復凶有災眚用行師終有大敗以其國君凶至于十年不克征</ab>
+      </div>
+      <div xml:id="h25" type="hexagram" n="25" corresp="#source-harvard">
+        <head>無妄</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h25-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765552">初九：无妄往吉</ab>
+        <ab xml:id="h25-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765552">六二：不耕穫不菑畬則利有攸往</ab>
+        <ab xml:id="h25-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765554">六三：无妄之災或繫之牛行人之得邑人之災</ab>
+        <ab xml:id="h25-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765554">九四：可貞无咎</ab>
+        <ab xml:id="h25-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765555">九五：无妄之疾勿藥有喜</ab>
+        <ab xml:id="h25-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765555">上九：无妄行有眚无攸利</ab>
+      </div>
+      <div xml:id="h26" type="hexagram" n="26" corresp="#source-harvard">
+        <head>大畜</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h26-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765557">初九：有厲利已</ab>
+        <ab xml:id="h26-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765557">九二：輿說輹</ab>
+        <ab xml:id="h26-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765558">九三：良馬逐利艱貞曰閑輿衛利有攸往</ab>
+        <ab xml:id="h26-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765558">六四：童牛之牿元吉</ab>
+        <ab xml:id="h26-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765559">六五：豶豕之牙吉</ab>
+        <ab xml:id="h26-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765559">上九：何天之衢亨</ab>
+      </div>
+      <div xml:id="h27" type="hexagram" n="27" corresp="#source-harvard">
+        <head>頤</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h27-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765562">初九：舍爾靈龜觀我朶頤凶</ab>
+        <ab xml:id="h27-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765563">六二：顛頤拂經于丘頤征凶</ab>
+        <ab xml:id="h27-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765564">六三：拂頤貞凶十年勿用无攸利</ab>
+        <ab xml:id="h27-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765565">六四：顛頤吉虎視眈眈其欲逐逐无咎</ab>
+        <ab xml:id="h27-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765566">六五：拂經居貞吉不可涉大川</ab>
+        <ab xml:id="h27-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765567">上九：由頤厲吉利涉大川</ab>
+      </div>
+      <div xml:id="h28" type="hexagram" n="28" corresp="#source-harvard">
+        <head>大過</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h28-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765569">初六：藉用白茅无咎</ab>
+        <ab xml:id="h28-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765570">九二：枯楊生稊老夫得其女妻无不利</ab>
+        <ab xml:id="h28-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765571">九三：棟橈凶</ab>
+        <ab xml:id="h28-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765571">九四：棟隆吉有它吝</ab>
+        <ab xml:id="h28-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765572">九五：枯楊生華老婦得其士夫无咎无譽</ab>
+        <ab xml:id="h28-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765573">上六：過涉滅頂凶无咎</ab>
+      </div>
+      <div xml:id="h29" type="hexagram" n="29" corresp="#source-harvard">
+        <head>坎</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h29-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765575">初六：習坎入于坎窞凶</ab>
+        <ab xml:id="h29-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765576">九二：坎有險求小得</ab>
+        <ab xml:id="h29-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765576">六三：來之坎坎險且枕入于坎窞勿用</ab>
+        <ab xml:id="h29-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765577">六四：樽酒簋貳用缶納約自牖終无咎</ab>
+        <ab xml:id="h29-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765578">九五：坎不盈祗既平无咎</ab>
+        <ab xml:id="h29-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765579">上六：係用徽纆寘于叢棘三歲不得凶</ab>
+      </div>
+      <div xml:id="h30" type="hexagram" n="30" corresp="#source-harvard">
+        <head>離</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h30-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765580">初九：履錯然敬之无咎</ab>
+        <ab xml:id="h30-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765581">六二：黃離元吉</ab>
+        <ab xml:id="h30-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765582">九三：日昃之離不鼓缶而歌則大耋之嗟凶</ab>
+        <ab xml:id="h30-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765583">九四：突如其來如焚如死如棄如</ab>
+        <ab xml:id="h30-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765583">六五：出涕沱若戚嗟若吉</ab>
+        <ab xml:id="h30-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765584">上九：王用出征有嘉折首獲匪其醜无咎</ab>
+      </div>
+      <div xml:id="h31" type="hexagram" n="31" corresp="#source-harvard">
+        <head>咸</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h31-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765591">初六：咸其拇</ab>
+        <ab xml:id="h31-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765592">六二：咸其腓凶居吉</ab>
+        <ab xml:id="h31-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765592">九三：咸其股執其隨往吝</ab>
+        <ab xml:id="h31-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765593">九四：貞吉悔亡憧憧往來朋從爾思</ab>
+        <ab xml:id="h31-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765596">九五：咸其脢无悔</ab>
+        <ab xml:id="h31-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765596">上六：咸其輔頰舌</ab>
+      </div>
+      <div xml:id="h32" type="hexagram" n="32" corresp="#source-harvard">
+        <head>恆</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h32-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765598">初六：浚恆貞凶无攸利</ab>
+        <ab xml:id="h32-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765599">九二：悔亡</ab>
+        <ab xml:id="h32-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765600">九三：不恆其德或承之羞貞吝</ab>
+        <ab xml:id="h32-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765600">九四：田无禽</ab>
+        <ab xml:id="h32-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765601">六五：恆其德貞婦人吉夫子凶</ab>
+        <ab xml:id="h32-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765601">上六：振恆凶</ab>
+      </div>
+      <div xml:id="h33" type="hexagram" n="33" corresp="#source-harvard">
+        <head>遯</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h33-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765603">初六：遯尾厲勿用有攸往</ab>
+        <ab xml:id="h33-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765604">六二：執之用黃牛之革莫之勝說</ab>
+        <ab xml:id="h33-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765605">九三：係遯有疾厲畜臣妾吉</ab>
+        <ab xml:id="h33-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765606">九四：好遯君子吉小人否</ab>
+        <ab xml:id="h33-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765607">九五：嘉遯貞吉</ab>
+        <ab xml:id="h33-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765607">上九：肥遯无不利</ab>
+      </div>
+      <div xml:id="h34" type="hexagram" n="34" corresp="#source-harvard">
+        <head>大壯</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h34-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765608">初九：壯于趾征凶有孚</ab>
+        <ab xml:id="h34-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765608">九二：貞吉</ab>
+        <ab xml:id="h34-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765609">九三：小人用壯君子用罔貞厲羝羊觸藩羸其角</ab>
+        <ab xml:id="h34-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765610">九四：貞吉悔亡藩決不羸壯于大輿之輹</ab>
+        <ab xml:id="h34-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765611">六五：喪羊于易无悔</ab>
+        <ab xml:id="h34-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765611">上六：羝羊觸藩不能退不能遂无攸利艱則吉</ab>
+      </div>
+      <div xml:id="h35" type="hexagram" n="35" corresp="#source-harvard">
+        <head>晉</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h35-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765613">初六：晉如摧如貞吉罔孚裕无咎</ab>
+        <ab xml:id="h35-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765614">六二：晉如愁如貞吉受茲介福于其王母</ab>
+        <ab xml:id="h35-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765615">六三：衆允悔亡</ab>
+        <ab xml:id="h35-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765615">九四：晉如鼫鼠貞厲</ab>
+        <ab xml:id="h35-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765616">六五：悔亡失得勿恤往吉无不利</ab>
+        <ab xml:id="h35-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765616">上九：晉其角維用伐邑厲吉无咎貞吝</ab>
+      </div>
+      <div xml:id="h36" type="hexagram" n="36" corresp="#source-harvard">
+        <head>明夷</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h36-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765618">初九：明夷于飛垂其翼君子于行三日不食有攸往主人有言</ab>
+        <ab xml:id="h36-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765619">六二：明夷夷于左股用拯馬壯吉</ab>
+        <ab xml:id="h36-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765620">九三：明夷于南狩得其大首不可疾貞</ab>
+        <ab xml:id="h36-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765621">六四：入于左腹獲明夷之心于出門庭</ab>
+        <ab xml:id="h36-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765622">六五：箕子之明夷利貞</ab>
+        <ab xml:id="h36-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765622">上六：不明晦初登于天後入于地</ab>
+      </div>
+      <div xml:id="h37" type="hexagram" n="37" corresp="#source-harvard">
+        <head>家人</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h37-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765624">初九：閑有家悔亡</ab>
+        <ab xml:id="h37-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765624">六二：无攸遂在中饋貞吉</ab>
+        <ab xml:id="h37-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765625">九三：家人嗃嗃悔厲吉婦子嘻嘻終吝</ab>
+        <ab xml:id="h37-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765626">六四：富家大吉</ab>
+        <ab xml:id="h37-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765626">九五：王假有家勿恤吉</ab>
+        <ab xml:id="h37-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765627">上九：有孚威如終吉</ab>
+      </div>
+      <div xml:id="h38" type="hexagram" n="38" corresp="#source-harvard">
+        <head>睽</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h38-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765628">初九：悔亡喪馬勿逐自復見惡人无咎</ab>
+        <ab xml:id="h38-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765630">九二：遇主于巷无咎</ab>
+        <ab xml:id="h38-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765630">六三：見輿曳其牛掣其人天且劓无初有終</ab>
+        <ab xml:id="h38-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765631">九四：睽孤遇元夫交孚厲无咎</ab>
+        <ab xml:id="h38-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765632">六五：悔亡厥宗噬膚往何咎</ab>
+        <ab xml:id="h38-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765633">上九：睽孤見豕負塗載鬼一車先張之弧後說之弧匪寇婚媾往遇雨則吉</ab>
+      </div>
+      <div xml:id="h39" type="hexagram" n="39" corresp="#source-harvard">
+        <head>蹇</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h39-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765635">初六：往蹇來譽</ab>
+        <ab xml:id="h39-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765636">六二：王臣蹇蹇匪躬之故</ab>
+        <ab xml:id="h39-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765637">九三：往蹇來反</ab>
+        <ab xml:id="h39-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765637">六四：往蹇來連</ab>
+        <ab xml:id="h39-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765637">九五：大蹇朋來</ab>
+        <ab xml:id="h39-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765638">上六：往蹇來碩吉利見大人</ab>
+      </div>
+      <div xml:id="h40" type="hexagram" n="40" corresp="#source-harvard">
+        <head>解</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h40-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765642">初六：无咎</ab>
+        <ab xml:id="h40-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765642">九二：田獲三狐得黃矢貞吉</ab>
+        <ab xml:id="h40-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765643">六三：負且乘致寇至貞吝</ab>
+        <ab xml:id="h40-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765644">九四：解而拇朋至斯孚</ab>
+        <ab xml:id="h40-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765644">六五：君子維有解吉有孚于小人</ab>
+        <ab xml:id="h40-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765645">上六：公用射隼于高墉之上獲之无不利</ab>
+      </div>
+      <div xml:id="h41" type="hexagram" n="41" corresp="#source-harvard">
+        <head>損</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h41-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765648">初九：已事遄往无咎酌損之</ab>
+        <ab xml:id="h41-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765648">九二：利貞征凶弗損益之</ab>
+        <ab xml:id="h41-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765649">六三：三人行則損一人一人行則得其友</ab>
+        <ab xml:id="h41-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765650">六四：損其疾使遄有喜无咎</ab>
+        <ab xml:id="h41-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765650">六五：或益之十朋之龜弗克違元吉</ab>
+        <ab xml:id="h41-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765651">上九：弗損益之无咎貞吉利有攸往得臣无家</ab>
+        <note type="sourceNote">上九大字中段印墨缺損；貞吉利有攸往另見同頁程傳逐句引文，得臣无家另見次頁16765652集說引文；不採現代轉錄補文。</note>
+      </div>
+      <div xml:id="h42" type="hexagram" n="42" corresp="#source-harvard">
+        <head>益</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h42-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765653">初九：利用爲大作元吉无咎</ab>
+        <ab xml:id="h42-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765654">六二：或益之十朋之龜弗克違永貞吉王用享于帝吉</ab>
+        <ab xml:id="h42-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765655">六三：益之用凶事无咎有孚中行告公用圭</ab>
+        <ab xml:id="h42-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765657">六四：中行告公從利用爲依遷國</ab>
+        <ab xml:id="h42-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765657">九五：有孚惠心勿問元吉有孚惠我德</ab>
+        <ab xml:id="h42-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765658">上九：莫益之或擊之立心勿恆凶</ab>
+      </div>
+      <div xml:id="h43" type="hexagram" n="43" corresp="#source-harvard">
+        <head>夬</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h43-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765660">初九：壯于前趾往不勝爲咎</ab>
+        <ab xml:id="h43-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765661">九二：惕號莫夜有戎勿恤</ab>
+        <ab xml:id="h43-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765662">九三：壯于頄有凶君子夬夬獨行遇雨若濡有慍无咎</ab>
+        <ab xml:id="h43-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765663">九四：臀无膚其行次且牽羊悔亡聞言不信</ab>
+        <ab xml:id="h43-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765664">九五：莧陸夬夬中行无咎</ab>
+        <ab xml:id="h43-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765665">上六：无號終有凶</ab>
+      </div>
+      <div xml:id="h44" type="hexagram" n="44" corresp="#source-harvard">
+        <head>姤</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h44-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765667">初六：繫于金柅貞吉有攸往見凶羸豕孚蹢躅</ab>
+        <ab xml:id="h44-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765667">九二：包有魚无咎不利賓</ab>
+        <ab xml:id="h44-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765668">九三：臀无膚其行次且厲无大咎</ab>
+        <ab xml:id="h44-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765669">九四：包无魚起凶</ab>
+        <ab xml:id="h44-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765670">九五：以杞包瓜含章有隕自天</ab>
+        <ab xml:id="h44-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765670">上九：姤其角吝无咎</ab>
+      </div>
+      <div xml:id="h45" type="hexagram" n="45" corresp="#source-harvard">
+        <head>萃</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h45-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765673">初六：有孚不終乃亂乃萃若號一握爲笑勿恤往无咎</ab>
+        <ab xml:id="h45-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765674">六二：引吉无咎孚乃利用禴</ab>
+        <ab xml:id="h45-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765675">六三：萃如嗟如无攸利往无咎小吝</ab>
+        <ab xml:id="h45-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765676">九四：大吉无咎</ab>
+        <ab xml:id="h45-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765676">九五：萃有位无咎匪孚元永貞悔亡</ab>
+        <ab xml:id="h45-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765677">上六：齎咨涕洟无咎</ab>
+      </div>
+      <div xml:id="h46" type="hexagram" n="46" corresp="#source-harvard">
+        <head>升</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h46-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765679">初六：允升大吉</ab>
+        <ab xml:id="h46-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765679">九二：孚乃利用禴无咎</ab>
+        <ab xml:id="h46-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765680">九三：升虛邑</ab>
+        <ab xml:id="h46-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765680">六四：王用亨于岐山吉无咎</ab>
+        <ab xml:id="h46-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765681">六五：貞吉升階</ab>
+        <ab xml:id="h46-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765681">上六：冥升利于不息之貞</ab>
+      </div>
+      <div xml:id="h47" type="hexagram" n="47" corresp="#source-harvard">
+        <head>困</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h47-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765683">初六：臀困于株木入于幽谷三歲不覿</ab>
+        <ab xml:id="h47-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765684">九二：困于酒食朱紱方來利用亨祀征凶无咎</ab>
+        <ab xml:id="h47-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765685">六三：困于石據于蒺藜入于其宮不見其妻凶</ab>
+        <ab xml:id="h47-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765685">九四：來徐徐困于金車吝有終</ab>
+        <ab xml:id="h47-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765686">九五：劓刖困于赤紱乃徐有說利用祭祀</ab>
+        <ab xml:id="h47-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765687">上六：困于葛藟于臲卼曰動悔有悔征吉</ab>
+      </div>
+      <div xml:id="h48" type="hexagram" n="48" corresp="#source-harvard">
+        <head>井</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h48-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765694">初六：井泥不食舊井无禽</ab>
+        <ab xml:id="h48-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765695">九二：井谷射鮒甕敝漏</ab>
+        <ab xml:id="h48-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765696">九三：井渫不食爲我心惻可用汲王明並受其福</ab>
+        <ab xml:id="h48-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765696">六四：井甃无咎</ab>
+        <ab xml:id="h48-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765697">九五：井洌寒泉食</ab>
+        <ab xml:id="h48-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765697">上六：井收勿幕有孚元吉</ab>
+      </div>
+      <div xml:id="h49" type="hexagram" n="49" corresp="#source-harvard">
+        <head>革</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h49-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765699">初九：鞏用黃牛之革</ab>
+        <ab xml:id="h49-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765700">六二：已日乃革之征吉无咎</ab>
+        <ab xml:id="h49-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765701">九三：征凶貞厲革言三就有孚</ab>
+        <ab xml:id="h49-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765701">九四：悔亡有孚改命吉</ab>
+        <ab xml:id="h49-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765702">九五：大人虎變未占有孚</ab>
+        <ab xml:id="h49-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765703">上六：君子豹變小人革面征凶居貞吉</ab>
+      </div>
+      <div xml:id="h50" type="hexagram" n="50" corresp="#source-harvard">
+        <head>鼎</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h50-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765706">初六：鼎顛趾利出否得妾以其子无咎</ab>
+        <ab xml:id="h50-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765707">九二：鼎有實我仇有疾不我能即吉</ab>
+        <ab xml:id="h50-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765707">九三：鼎耳革其行塞雉膏不食方雨虧悔終吉</ab>
+        <ab xml:id="h50-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765708">九四：鼎折足覆公餗其形渥凶</ab>
+        <ab xml:id="h50-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765709">六五：鼎黃耳金鉉利貞</ab>
+        <ab xml:id="h50-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765710">上九：鼎玉鉉大吉无不利</ab>
+      </div>
+      <div xml:id="h51" type="hexagram" n="51" corresp="#source-harvard">
+        <head>震</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h51-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765713">初九：震來虩虩後笑言啞啞吉</ab>
+        <ab xml:id="h51-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765713">六二：震來厲億喪貝躋于九陵勿逐七日得</ab>
+        <ab xml:id="h51-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765714">六三：震蘇蘇震行无眚</ab>
+        <ab xml:id="h51-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765715">九四：震遂泥</ab>
+        <ab xml:id="h51-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765715">六五：震往來厲億无喪有事</ab>
+        <ab xml:id="h51-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765716">上六：震索索視矍矍征凶震不于其躬于其鄰无咎婚媾有言</ab>
+      </div>
+      <div xml:id="h52" type="hexagram" n="52" corresp="#source-harvard">
+        <head>艮</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h52-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765719">初六：艮其趾无咎利永貞</ab>
+        <ab xml:id="h52-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765720">六二：艮其腓不拯其隨其心不快</ab>
+        <ab xml:id="h52-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765720">九三：艮其限列其夤厲薰心</ab>
+        <ab xml:id="h52-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765722">六四：艮其身无咎</ab>
+        <ab xml:id="h52-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765722">六五：艮其輔言有序悔亡</ab>
+        <ab xml:id="h52-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765723">上九：敦艮吉</ab>
+      </div>
+      <div xml:id="h53" type="hexagram" n="53" corresp="#source-harvard">
+        <head>漸</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h53-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765725">初六：鴻漸于干小子厲有言无咎</ab>
+        <ab xml:id="h53-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765726">六二：鴻漸于磐飲食衎衎吉</ab>
+        <ab xml:id="h53-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765726">九三：鴻漸于陸夫征不復婦孕不育凶利禦寇</ab>
+        <ab xml:id="h53-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765727">六四：鴻漸于木或得其桷无咎</ab>
+        <ab xml:id="h53-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765727">九五：鴻漸于陵婦三歲不孕終莫之勝吉</ab>
+        <ab xml:id="h53-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765728">上九：鴻漸于陸其羽可用爲儀吉</ab>
+      </div>
+      <div xml:id="h54" type="hexagram" n="54" corresp="#source-harvard">
+        <head>歸妹</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h54-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765731">初九：歸妹以娣跛能履征吉</ab>
+        <ab xml:id="h54-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765731">九二：眇能視利幽人之貞</ab>
+        <ab xml:id="h54-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765732">六三：歸妹以須反歸以娣</ab>
+        <ab xml:id="h54-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765733">九四：歸妹愆期遲歸有時</ab>
+        <ab xml:id="h54-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765733">六五：帝乙歸妹其君之袂不如其娣之袂良月幾望吉</ab>
+        <ab xml:id="h54-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765734">上六：女承筐无實士刲羊无血无攸利</ab>
+      </div>
+      <div xml:id="h55" type="hexagram" n="55" corresp="#source-harvard">
+        <head>豐</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h55-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765735">初九：遇其配主雖旬无咎往有尚</ab>
+        <ab xml:id="h55-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765736">六二：豐其蔀日中見斗往得疑疾有孚發若吉</ab>
+        <ab xml:id="h55-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765737">九三：豐其沛日中見沬折其右肱无咎</ab>
+        <ab xml:id="h55-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765738">九四：豐其蔀日中見斗遇其夷主吉</ab>
+        <ab xml:id="h55-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765739">六五：來章有慶譽吉</ab>
+        <ab xml:id="h55-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765740">上六：豐其屋蔀其家闚其戶闃其无人三歲不覿凶</ab>
+      </div>
+      <div xml:id="h56" type="hexagram" n="56" corresp="#source-harvard">
+        <head>旅</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h56-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765742">初六：旅瑣瑣斯其所取災</ab>
+        <ab xml:id="h56-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765742">六二：旅即次懷其資得童僕貞</ab>
+        <ab xml:id="h56-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765743">九三：旅焚其次喪其童僕貞厲</ab>
+        <ab xml:id="h56-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765743">九四：旅于處得其資斧我心不快</ab>
+        <ab xml:id="h56-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765744">六五：射雉一矢亡終以譽命</ab>
+        <ab xml:id="h56-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765745">上九：鳥焚其巢旅人先笑後號咷喪牛于易凶</ab>
+      </div>
+      <div xml:id="h57" type="hexagram" n="57" corresp="#source-harvard">
+        <head>巽</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h57-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765746">初六：進退利武人之貞</ab>
+        <ab xml:id="h57-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765747">九二：巽在牀下用史巫紛若吉无咎</ab>
+        <ab xml:id="h57-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765748">九三：頻巽吝</ab>
+        <ab xml:id="h57-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765748">六四：悔亡田獲三品</ab>
+        <ab xml:id="h57-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765749">九五：貞吉悔亡无不利无初有終先庚三日後庚三日吉</ab>
+        <ab xml:id="h57-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765750">上九：巽在牀下喪其資斧貞凶</ab>
+      </div>
+      <div xml:id="h58" type="hexagram" n="58" corresp="#source-harvard">
+        <head>兌</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h58-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765752">初九：和兌吉</ab>
+        <ab xml:id="h58-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765752">九二：孚兌吉悔亡</ab>
+        <ab xml:id="h58-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765752">六三：來兌凶</ab>
+        <ab xml:id="h58-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765753">九四：商兌未寧介疾有喜</ab>
+        <ab xml:id="h58-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765753">九五：孚于剝有厲</ab>
+        <ab xml:id="h58-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765755">上六：引兌</ab>
+      </div>
+      <div xml:id="h59" type="hexagram" n="59" corresp="#source-harvard">
+        <head>渙</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h59-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765756">初六：用拯馬壯吉</ab>
+        <ab xml:id="h59-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765756">九二：渙奔其机悔亡</ab>
+        <ab xml:id="h59-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765757">六三：渙其躬无悔</ab>
+        <ab xml:id="h59-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765757">六四：渙其羣元吉渙有丘匪夷所思</ab>
+        <ab xml:id="h59-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765758">九五：渙汗其大號渙王居无咎</ab>
+        <ab xml:id="h59-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765760">上九：渙其血去逖出无咎</ab>
+      </div>
+      <div xml:id="h60" type="hexagram" n="60" corresp="#source-harvard">
+        <head>節</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h60-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765761">初九：不出戶庭无咎</ab>
+        <ab xml:id="h60-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765761">九二：不出門庭凶</ab>
+        <ab xml:id="h60-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765762">六三：不節若則嗟若无咎</ab>
+        <ab xml:id="h60-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765763">六四：安節亨</ab>
+        <ab xml:id="h60-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765763">九五：甘節吉往有尚</ab>
+        <ab xml:id="h60-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765763">上六：苦節貞凶悔亡</ab>
+      </div>
+      <div xml:id="h61" type="hexagram" n="61" corresp="#source-harvard">
+        <head>中孚</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h61-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765766">初九：虞吉有他不燕</ab>
+        <ab xml:id="h61-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765767">九二：鳴鶴在陰其子和之我有好爵吾與爾靡之</ab>
+        <ab xml:id="h61-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765768">六三：得敵或鼓或罷或泣或歌</ab>
+        <ab xml:id="h61-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765768">六四：月幾望馬匹亡无咎</ab>
+        <ab xml:id="h61-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765769">九五：有孚攣如无咎</ab>
+        <ab xml:id="h61-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765770">上九：翰音登于天貞凶</ab>
+      </div>
+      <div xml:id="h62" type="hexagram" n="62" corresp="#source-harvard">
+        <head>小過</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h62-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765772">初六：飛鳥以凶</ab>
+        <ab xml:id="h62-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765773">六二：過其祖遇其妣不及其君遇其臣无咎</ab>
+        <ab xml:id="h62-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765774">九三：弗過防之從或戕之凶</ab>
+        <ab xml:id="h62-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765775">九四：无咎弗過遇之往厲必戒勿用永貞</ab>
+        <ab xml:id="h62-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765776">六五：密雲不雨自我西郊公弋取彼在穴</ab>
+        <ab xml:id="h62-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765776">上六：弗遇過之飛鳥離之凶是謂災眚</ab>
+      </div>
+      <div xml:id="h63" type="hexagram" n="63" corresp="#source-harvard">
+        <head>既濟</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h63-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765779">初九：曳其輪濡其尾无咎</ab>
+        <ab xml:id="h63-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765779">六二：婦喪其茀勿逐七日得</ab>
+        <ab xml:id="h63-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765780">九三：高宗伐鬼方三年克之小人勿用</ab>
+        <ab xml:id="h63-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765781">六四：繻有衣袽終日戒</ab>
+        <ab xml:id="h63-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765781">九五：東鄰殺牛不如西鄰之禴祭實受其福</ab>
+        <ab xml:id="h63-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765782">上六：濡其首厲</ab>
+      </div>
+      <div xml:id="h64" type="hexagram" n="64" corresp="#source-harvard">
+        <head>未濟</head>
+        <note type="existing-review-status">scan-reviewed</note>
+        <note type="source"><ref target="https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW">《御纂周易折中》康熙五十四年武英殿刊本（1715）</ref></note>
+        <ab xml:id="h64-l1" type="ordinary" n="1" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765783">初六：濡其尾吝</ab>
+        <ab xml:id="h64-l2" type="ordinary" n="2" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765784">九二：曳其輪貞吉</ab>
+        <ab xml:id="h64-l3" type="ordinary" n="3" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765784">六三：未濟征凶利涉大川</ab>
+        <ab xml:id="h64-l4" type="ordinary" n="4" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765785">九四：貞吉悔亡震用伐鬼方三年有賞于大國</ab>
+        <ab xml:id="h64-l5" type="ordinary" n="5" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765786">六五：貞吉无悔君子之光有孚吉</ab>
+        <ab xml:id="h64-l6" type="ordinary" n="6" facs="https://nrs.harvard.edu/URN-3:FHCL:4142005:VIEW?page=16765787">上九：有孚于飲酒无咎濡其首有孚失是</ab>
+      </div>
+    </body>
+  </text>
+</TEI>
