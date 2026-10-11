@@ -6,6 +6,8 @@
 
 整理者與維護者：**一卦 yigua.art / [poplolioi11](https://github.com/poplolioi11)**。此署名指本資料集的轉錄、整理與維護，不是古籍作者，也不代表館藏機構。
 
+正式封存：**[資料包 0.1.0 · DOI: 10.5281/zenodo.23298982](https://doi.org/10.5281/zenodo.23298982)**。學術引用請使用這個特定版本 DOI；[全版本 DOI](https://doi.org/10.5281/zenodo.23298981) 用於介紹持續維護的整個資料集，會指向最新封存版。
+
 ## 🌌 創作者宣言 / Creator's Statement
 
 本專案的誕生，得益於無數前人留下的文化資產，以及現代 AI 技術的協助。在數位與 AI 交織的時代，沒有任何創意是孤立存在的。
@@ -53,7 +55,9 @@ node verify.mjs
 
 ### 可重現的版本與完整性
 
-本庫以 **資料版本、Git 提交識別碼及檔案 SHA-256** 識別所用內容，不以網站版本號代替資料版本。公開庫首次建立於 2026-10-10；加入 TEI 的 0.1.0 發行包準備於 2026-10-11；古籍資料原匯出日期為 2026-10-07。這些日期不能作為新的全校完成日期。Zenodo 識別碼為 [10.5281/zenodo.23298982](https://doi.org/10.5281/zenodo.23298982)，公開與登記狀態以 Zenodo 記錄為準；製備時 XML 註記的 reserved 是當次查核狀態，不是逐字校對認證。
+本庫以 **資料版本、Git 提交識別碼及檔案 SHA-256** 識別所用內容，不以網站版本號代替資料版本。公開庫首次建立於 2026-10-10；加入 TEI 的 0.1.0 發行包於 2026-10-11 封存發布於 Zenodo；古籍資料原匯出日期為 2026-10-07。這些日期不能作為新的全校完成日期。版本 DOI 為 [10.5281/zenodo.23298982](https://doi.org/10.5281/zenodo.23298982)；製備時 XML 註記的 reserved 是當次歷史查核狀態，不是目前尚未發布，也不是逐字校對認證。
+
+`main` 上的說明文件可以持續補充；[v0.1.0 發行包](https://github.com/poplolioi11/yigua-wuyingdian-lines/releases/tag/v0.1.0) 與 Zenodo 所存檔案保持原樣。`PACKAGE-SHA256SUMS` 驗證的是該固定發行包，不是後續更新的 `main` 全部檔案；`SHA256SUMS` 仍可驗證未變動的 JSON／TXT。
 
 目前兩份資料檔的固定校驗值為：
 
@@ -75,7 +79,18 @@ node verify.mjs
 
 根目錄的 [CITATION.cff](CITATION.cff) 提供機器可讀的資料集引用資訊，使用公開帳號 `poplolioi11` 署名，不公開真實姓名或私人信箱。GitHub 的「Cite this repository」入口可取得 APA 與 BibTeX 格式；引用特定資料時，請另記錄所用提交識別碼或檔案 SHA-256，便於追溯。
 
-建議引用：**poplolioi11（一卦 yigua.art）。《御纂周易折中》武英殿刊本·六十四卦爻辭［資料集］。2026。https://github.com/poplolioi11/yigua-wuyingdian-lines**
+建議引用（請依投稿規範調整格式）：
+
+> poplolioi11（一卦 yigua.art）。（2026）。《御纂周易折中》武英殿刊本·六十四卦爻辭（發行包 0.1.0）［資料集］。Zenodo。[https://doi.org/10.5281/zenodo.23298982](https://doi.org/10.5281/zenodo.23298982)
+
+這個 DOI 識別資料包，不是整個 yigua.art 網站或私有網站程式碼的 DOI。可將它放入論文參考文獻、研究計畫、作品集或成果清單；它能讓讀者找到所用版本及整理者資訊，但不表示文本無誤、同儕審查通過或已取得法律認證。
+
+### 日後更新與 DOI
+
+- 引用或重現研究時，使用實際取得的**特定版本 DOI**，另列所用檔案校驗值與原刻頁碼；介紹整個持續維護的計畫時，可使用全版本 DOI。這與 [Zenodo 的版本引用建議](https://zenodo.org/help/versioning) 一致。
+- 日後校對改字或更新資料檔，另建固定發行版，經驗收後建立相連的 Zenodo 新版本，更新 `CITATION.cff` 的版本、日期與版本 DOI；保留舊版供查核，不把新文字套用到舊 DOI 下。
+- 單純補充 GitHub `main` 的 README 不另建立 Zenodo 版本、不改既有封存檔。本次補充的是引用說明，語料、XML、授權、既有發行包及 DOI 不變。
+- 可使用 GitHub 的「Cite this repository」取得引用格式；其依據是已含 DOI 的 `CITATION.cff`，不需在每個資料或程式檔再重複填寫。詳見 [GitHub 引用文件](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)。
 
 ### 分開引用資料集、古籍與館藏
 
