@@ -1,5 +1,11 @@
 # 武英殿本《周易》爻辭資料｜易經・I Ching・Yijing
 
+## 摘要 / Abstract
+
+本資料集整理1715年武英殿刊《御纂周易折中》的六十四卦爻辭，共384條及「用九」「用六」，提供可供檢索與引用的結構化轉錄。多數來源定位依哈佛燕京圖書館藏本，第20卦另用明治大學圖書館同版藏本；兩者尚未證實為同次印刷。本版提供JSON、TXT及新增的TEI P5 XML，不含卦辭與注解，亦非全書轉錄。既有scan-reviewed標記不代表獨立二校；兩條特殊辭的個別頁碼仍待核實。
+
+This dataset provides a structured transcription of the 384 line statements and the additional Yong Jiu and Yong Liu statements from the 1715 Wuyingdian edition of 《御纂周易折中》 for retrieval and citation. Most source locations refer to the Harvard-Yenching Library copy; hexagram 20 uses the Meiji University Library copy of the same edition, whose identity of print run has not been established. JSON and TXT are accompanied by newly added TEI P5 XML. Hexagram judgments and commentaries are excluded, so this is not a full-book transcription. The recorded scan-reviewed label does not establish independent double collation, and separate page citations for the two additional statements remain unverified.
+
 一卦（[yigua.art](https://yigua.art/)）公開的《御纂周易折中》康熙五十四年（1715）武英殿刊本爻辭轉錄資料。包含六十四卦的 **384 條爻辭，以及乾「用九」、坤「用六」**；不含卦辭、注解或全書。這是可下載、可核對的資料集，不是網站原始碼。
 
 資料署名保留為 **yigua.art網站轉譯**；實際工作是古籍影像的轉錄、整理與既有校對，不是新翻譯。古籍原文可自由使用、商用及改作；請求重用者保留底本、來源連結及這項署名，但不以此限制公有領域原文的使用。本站具有原創性的說明文字另採 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。完整範圍見 [LICENSE.md](LICENSE.md)。
