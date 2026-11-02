@@ -1,10 +1,18 @@
-# 武英殿本《周易》爻辭資料｜易經・I Ching・Yijing
+# 御纂周易折中（1715；武英殿；T2354494／LI00000554）爻辭轉錄資料 / Yuzuan Zhouyi Zhezhong: Line-statement transcription dataset
 
 ## 摘要 / Abstract
 
-本資料集整理1715年武英殿刊《御纂周易折中》的六十四卦爻辭，共384條及「用九」「用六」，提供可供檢索與引用的結構化轉錄。多數來源定位依哈佛燕京圖書館藏本，第20卦另用明治大學圖書館同版藏本；兩者尚未證實為同次印刷。本版提供JSON、TXT及新增的TEI P5 XML，不含卦辭與注解，亦非全書轉錄。既有scan-reviewed標記不代表獨立二校；兩條特殊辭的個別頁碼仍待核實。
+《御纂周易折中》是清代李光地等奉敕編纂的《周易》經傳注釋彙編，所用武英殿本刊於1715年北京。這份爻辭資料可供易學經文比對、字詞查找與原頁引用。本版轉錄六十四卦384條爻辭及乾「用九」、坤「用六」，提供JSON、TXT與新增的TEI P5 XML，不含卦辭或注釋；多數爻辭依哈佛燕京圖書館T2354494，第20卦依明治大學LI00000554，同版藏本尚未證實為同次印刷。既有影像覆核標記不代表獨立二校，用九、用六的個別原頁定位仍待核實。
 
-This dataset provides a structured transcription of the 384 line statements and the additional Yong Jiu and Yong Liu statements from the 1715 Wuyingdian edition of 《御纂周易折中》 for retrieval and citation. Most source locations refer to the Harvard-Yenching Library copy; hexagram 20 uses the Meiji University Library copy of the same edition, whose identity of print run has not been established. JSON and TXT are accompanied by newly added TEI P5 XML. Hexagram judgments and commentaries are excluded, so this is not a full-book transcription. The recorded scan-reviewed label does not establish independent double collation, and separate page citations for the two additional statements remain unverified.
+Yuzuan Zhouyi Zhezhong is a Qing imperially commissioned compilation of the Zhouyi and its commentaries by Li Guangdi and others; the Wuyingdian edition used here was printed in Beijing in 1715. This line-statement dataset supports comparison of Yijing wording and consultation and citation of source pages. It contains the 384 line statements and the additional Yong Jiu and Yong Liu statements in JSON, TXT and newly added TEI P5 XML, excluding hexagram judgments and commentary. Most locators refer to Harvard-Yenching T2354494; hexagram 20 uses Meiji University LI00000554, a same-edition witness not established as the same print run. Existing image-review labels do not establish independent double collation, and separate page locators for the two additional statements remain unverified.
+
+原件與書目入口 / Source witness and catalogue:
+
+- [館藏書目 / Catalogue](https://id.lib.harvard.edu/alma/990079179900203941/catalog)
+- [原件與館藏書目 / Source witness and catalogue](https://m-archives.meiji.jp/content/detail/LI00000554)
+- [原件／影像來源 / Source witness](https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW)
+- [IIIF manifest](https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:MANIFEST:3)
+- [IIIF manifest](https://m-archives.meiji.jp/api/meiji-da/items/LI00000554/manifest.json)
 
 一卦（[yigua.art](https://yigua.art/)）公開的《御纂周易折中》康熙五十四年（1715）武英殿刊本爻辭轉錄資料。包含六十四卦的 **384 條爻辭，以及乾「用九」、坤「用六」**；不含卦辭、注解或全書。這是可下載、可核對的資料集，不是網站原始碼。
 
