@@ -1,4 +1,4 @@
-# 御纂周易折中（1715；武英殿；T2354494／LI00000554）爻辭轉錄資料 / Yuzuan Zhouyi Zhezhong: Line-statement transcription dataset
+# 御纂周易折中(1715;武英殿;T2354494/LI00000554)爻辭轉錄資料 / Yuzuan Zhouyi Zhezhong [Imperially compiled synthesis of the Zhouyi]: Line-statement transcription dataset
 
 ## 摘要 / Abstract
 
@@ -13,6 +13,16 @@ Yuzuan Zhouyi Zhezhong is a Qing imperially commissioned compilation of the Zhou
 - [原件／影像來源 / Source witness](https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:VIEW)
 - [IIIF manifest](https://nrs.lib.harvard.edu/URN-3:FHCL:4142005:MANIFEST:3)
 - [IIIF manifest](https://m-archives.meiji.jp/api/meiji-da/items/LI00000554/manifest.json)
+
+### 題名與語言說明 / Title and language notes
+
+方括號英譯為編者意譯，非館目正式題名。Bracketed English titles are editorial discovery glosses, not official catalogue English titles.
+
+展示題名保留既有 Yuzuan Zhouyi Zhezhong；館目另列「yu zuan zhou yi zhe zhong」及「yuzuan zhouyi zhezhong」。明治館目題頭御製與資料集題名御纂的異文未於本輪裁定。
+
+題名來源 / Title source: [https://m-archives.meiji.jp/content/detail/LI00000554](https://m-archives.meiji.jp/content/detail/LI00000554)
+
+語言層次 / Language layers: 原文保留既有 lzh；本輪未作全書重新語體判定。 eng 標記現行英文摘要，不表示固定封存附件全部為英文。
 
 一卦（[yigua.art](https://yigua.art/)）公開的《御纂周易折中》康熙五十四年（1715）武英殿刊本爻辭轉錄資料。包含六十四卦的 **384 條爻辭，以及乾「用九」、坤「用六」**；不含卦辭、注解或全書。這是可下載、可核對的資料集，不是網站原始碼。
 
