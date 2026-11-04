@@ -3,11 +3,12 @@ type: dataset
 message: >-
   若引用本資料集的轉錄整理，請使用下列公開署名並記錄所用提交或檔案校驗值。
   古籍原文屬公有領域，引用與告知用途的請求不增加其使用限制。
-title: "《御纂周易折中》武英殿刊本·六十四卦爻辭"
+title: "御纂周易折中(1715;武英殿;T2354494/LI00000554)爻辭轉錄資料 / Yuzuan Zhouyi Zhezhong [Imperially compiled synthesis of the Zhouyi]: Line-statement transcription dataset"
 authors:
-  - family-names: "poplolioi11"
-    affiliation: "一卦 yigua.art"
-    website: "https://github.com/poplolioi11"
+  - family-names: Chu
+    given-names: Chen-Yu
+    orcid: https://orcid.org/0009-0003-9738-6914
+    website: https://github.com/poplolioi11
 url: "https://github.com/poplolioi11/yigua-wuyingdian-lines"
 version: "0.1.0"
 doi: "10.5281/zenodo.23298982"

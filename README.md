@@ -2,9 +2,9 @@
 
 ## 摘要 / Abstract
 
-《御纂周易折中》是清代李光地等奉敕編纂的《周易》經傳注釋彙編，所用武英殿本刊於1715年北京。這份爻辭資料可供易學經文比對、字詞查找與原頁引用。本版轉錄六十四卦384條爻辭及乾「用九」、坤「用六」，提供JSON、TXT與新增的TEI P5 XML，不含卦辭或注釋；多數爻辭依哈佛燕京圖書館T2354494，第20卦依明治大學LI00000554，同版藏本尚未證實為同次印刷。既有影像覆核標記不代表獨立二校，用九、用六的個別原頁定位仍待核實。
+《御纂周易折中》是清代李光地等奉敕編纂的《周易》經傳注釋彙編,所用武英殿本刊於1715年北京。這份爻辭資料可供易學經文比對、字詞查找與原頁引用。本版整理既有網站匯出的影像轉錄資料，原專案公開說明記載製作有AI協助，未於本版重做全量初錄或獨立二校。本版轉錄六十四卦384條爻辭及乾「用九」、坤「用六」,提供JSON、TXT與新增的TEI P5 XML,不含卦辭或注釋;多數爻辭依哈佛燕京圖書館T2354494,第20卦依明治大學LI00000554,同版藏本尚未證實為同次印刷。既有影像覆核標記不代表獨立二校,用九、用六的個別原頁定位仍待核實。
 
-Yuzuan Zhouyi Zhezhong is a Qing imperially commissioned compilation of the Zhouyi and its commentaries by Li Guangdi and others; the Wuyingdian edition used here was printed in Beijing in 1715. This line-statement dataset supports comparison of Yijing wording and consultation and citation of source pages. It contains the 384 line statements and the additional Yong Jiu and Yong Liu statements in JSON, TXT and newly added TEI P5 XML, excluding hexagram judgments and commentary. Most locators refer to Harvard-Yenching T2354494; hexagram 20 uses Meiji University LI00000554, a same-edition witness not established as the same print run. Existing image-review labels do not establish independent double collation, and separate page locators for the two additional statements remain unverified.
+Yuzuan Zhouyi Zhezhong is a Qing imperially commissioned compilation of the Zhouyi and its commentaries by Li Guangdi and others; the Wuyingdian edition used here was printed in Beijing in 1715. This line-statement dataset supports comparison of Yijing wording and consultation and citation of source pages. This release packages existing image-transcription exports; the project documentation records AI assistance, without a new complete initial reading or independent double collation for this release. It contains the 384 line statements and the additional Yong Jiu and Yong Liu statements in JSON, TXT and newly added TEI P5 XML, excluding hexagram judgments and commentary. Most locators refer to Harvard-Yenching T2354494; hexagram 20 uses Meiji University LI00000554, a same-edition witness not established as the same print run. Existing image-review labels do not establish independent double collation, and separate page locators for the two additional statements remain unverified.
 
 原件與書目入口 / Source witness and catalogue:
 
